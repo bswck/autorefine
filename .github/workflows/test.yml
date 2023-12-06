@@ -1,0 +1,33 @@
+name: "Tests"
+
+on: ["push"]
+
+jobs:
+  test:
+    runs-on: "ubuntu-latest"
+    environment: "Test"
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+    steps:
+    - uses: "actions/checkout@v4"
+    - name: "Set up Python ${{matrix.python-version}}"
+      uses: "actions/setup-python@v3"
+      with:
+        python-version: "${{matrix.python-version}}"
+    - name: "Install the project"
+      run: |
+        pipx install poetry
+        poetry install
+    - name: "Run tests"
+      run: "poetry run coverage run -m pytest -v ."
+    - name: "Report coverage"
+      run: >
+        poetry run coverage report
+        && poetry run coverage html --show-contexts
+        --title "autorefine coverage for ${{github.sha}}"
+    - name: "Store coverage html"
+      uses: "actions/upload-artifact@v3"
+      with:
+        name: "coverage-html"
+        path: "htmlcov"

@@ -1,0 +1,19 @@
+_commit: 45a69bc
+_src_path: gh:bswck/skeleton
+author_username: bswck
+docs: true
+docs_slug: autorefine
+email_address: bswck.dev@gmail.com
+github_username: bswck
+license_name: MIT
+org_full_name: Bartosz Sławecki
+package_name: autorefine
+project_description: Automatically refactor, commit and PR.
+publish_on_pypi: true
+pypi_project_description: Automatically refactor, commit and PR.
+pypi_project_name: autorefine
+python_version: '3.8'
+repo_name: autorefine
+test_suite: true
+use_precommit: true
+visibility: public

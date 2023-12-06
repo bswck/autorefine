@@ -1,0 +1,65 @@
+site_name: "autorefine"
+site_description: "Automatically refactor, commit and PR."
+site_url: "https://autorefine.readthedocs.io/en/latest/"
+repo_url: "https://github.com/bswck/autorefine"
+repo_name: "bswck/autorefine"
+watch:
+- "autorefine"
+
+nav:
+- "Overview": "index.md"
+- "Contributing": "contributing.md"
+# - "API Reference":
+#   - module.py: "reference/module.md"
+#   - etc.
+- "Changelog": "changelog.md"
+
+theme:
+  name: "material"
+  features:
+  - "content.code.annotate"
+  - "navigation.top"
+  - "navigation.tracking"
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: "material/brightness-auto"
+      name: "Switch to light mode"
+  - media: "(prefers-color-scheme: light)"
+    scheme: "default"
+    primary: "teal"
+    accent: "purple"
+    toggle:
+      icon: "material/weather-sunny"
+      name: "Switch to dark mode"
+  - media: "(prefers-color-scheme: dark)"
+    scheme: "slate"
+    primary: "black"
+    accent: "lime"
+    toggle:
+      icon: "material/weather-night"
+      name: "Switch to system preference"
+
+extra_css:
+- "css/mkdocstrings.css"
+
+markdown_extensions:
+- "pymdownx.highlight":
+    use_pygments: true
+- "pymdownx.superfences":
+    custom_fences:
+      - name: "mermaid"
+        class: "mermaid"
+        format: !!python/name:pymdownx.superfences.fence_code_format
+- "toc":
+    permalink: true
+- "admonition"
+- "pymdownx.emoji"
+- "pymdownx.magiclink"
+- "footnotes"
+
+plugins:
+- "autorefs"
+- "search"
+- "markdown-exec"
+- "mkdocstrings"
