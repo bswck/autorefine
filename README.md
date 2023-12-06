@@ -63,6 +63,9 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 1. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
+# Non-MVP ideas
+- `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine check` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
+- `autorefine template [SETUP_NAME]` to configure Quality Assurance and CI/CD tooling (ruff, tox, towncrier, sphinx, etc.) using a custom setup (e.g. `autorefine template jaraco`)—feature for projects that don't intend to use a skeleton.
 
 # Get inspired
 - https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c
