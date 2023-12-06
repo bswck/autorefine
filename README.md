@@ -28,7 +28,6 @@ The project is planned to be a wrapper around the following well-tested & recogn
 - [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
 - [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
 - [Ruff](https://github.com/astral-sh/ruff#readme) for automatic fixes and planning of manual refactoring steps,
-- [pyupgrade](https://github.com/asottile/pyupgrade#readme) for automatic fixes,
 - Static type checking:
   - [mypy](https://github.com/python/mypy#readme),
   - [pyre](https://github.com/facebook/pyre-check#readme),
