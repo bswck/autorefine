@@ -14,7 +14,7 @@ The project is aimed to provide a framework for the process of refactoring Pytho
 from the very beginning to the very end:
 - `autorefine analyze` → **analyze the project** with linters and type checkers,
 - `autorefine roadmap` → **create a refactoring roadmap** (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
-- `autorefine plan` → **create a delivery plan** (like in the issue above),
+- `autorefine plan` → **create a delivery plan** (like in the issue above) to split the refactoring process into **a sequence of iterations**,
 - `autorefine autopilot` → **apply automatic fixes** and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
 - `autorefine audit` → typically **run tests** and other tools that determine whether the project runs safe,
 - `autorefine troubleshoot` → using the configured **auditing task**, `git bisect` to **find out what fix went wrong**, describe the problem,
