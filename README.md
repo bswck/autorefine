@@ -76,16 +76,10 @@ If you want to…
 
 
 ## …use this tool in your project 💻
-You might simply install it with pip:
+You might simply install it with [pipx](https://github.com/pypa/pipx#readme):
 
 ```shell
-pip install autorefine
-```
-
-If you use [Poetry](https://python-poetry.org/), then run:
-
-```shell
-poetry add autorefine
+pipx install autorefine
 ```
 
 ## …contribute to [autorefine](https://github.com/bswck/autorefine) 🚀
