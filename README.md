@@ -10,6 +10,48 @@
 
 Automatically refactor, commit and PR.
 
+The project is aimed to provide a framework for the entire process of refactoring Python projects
+from the very beginning to the very end:
+- analyze the project,
+- create a refactoring roadmap,
+- create a delivery plan,
+- apply automatic fixes and commit them in reviewable chunks with meaningful descriptions,
+- leave the rest for manual work,
+- create a PR.
+
+Created to accomplish https://github.com/jaraco/skeleton/issues/98 and personal use to raise awareness of best practices across the global Python community.
+
+# Planned tooling
+- [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
+- [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
+- [Ruff](https://github.com/astral-sh/ruff#readme) for automatic fixes and planning of manual refactoring steps,
+- [pyupgrade](https://github.com/asottile/pyupgrade#readme) for automatic fixes,
+- Static type checking:
+  - [mypy](https://github.com/python/mypy#readme),
+  - [pyre](https://github.com/facebook/pyre-check#readme),
+  - [pytype](https://github.com/google/pytype#readme),
+- [diff-cover](https://github.com/Bachmann1234/diff_cover#readme) for [coverage](https://github.com/nedbat/coverage#readme) reports on fixes,
+- [smokeshow](https://github.com/samuelcolvin/smokeshow#readme) for hosting detailed refactoring roadmaps and delivery plans,
+- [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables.
+
+# Refactoring workflow
+1. First off, check for type annotations and add them if missing using MonkeyType.
+
+1. Analyze the project and create a refactoring roadmap.
+
+   1. Check for type errors using static type checkers.
+
+   1. Check for code style issues using linters.
+
+1. Apply automatic fixes and commit them in reviewable chunks with meaningful descriptions.
+
+1. Leave the rest for manual work.
+
+1. Create a PR.
+
+# Get inspired
+- https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c
+
 # Installation
 If you want to…
 
