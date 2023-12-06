@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/github/license/bswck/autorefine.svg?label=License)](https://github.com/bswck/autorefine/blob/HEAD/LICENSE)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-Standardize the refactoring process.
+Mechanize the refactoring process to operate on a large scale.
 
 The project is aimed to provide a framework for the entire process of refactoring Python projects
 from the very beginning to the very end:

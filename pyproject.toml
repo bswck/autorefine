@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "autorefine"
 version = "0.0.0"
-description = "Standardize the refactoring process."
+description = "Mechanize the refactoring process to operate on a large scale."
 authors = ["bswck <bswck.dev@gmail.com>"]
 license = "GPL-3.0"
 readme = "README.md"
