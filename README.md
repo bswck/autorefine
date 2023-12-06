@@ -16,7 +16,7 @@ from the very beginning to the very end:
 - `autorefine roadmap`—create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
 - `autorefine plan`—create a delivery plan (like in the issue above),
 - `autorefine autopilot`—apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
-- `autorefine check`—ensure there are no security violations,
+- `autorefine audit`—ensure there are no security violations,
 - `autorefine troubleshoot`—sync with the test suite and use `git bisect` to find out what fix went wrong, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize`—create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
@@ -55,7 +55,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 1. Run `autorefine autopilot` to apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions.
 
-1. Run `autorefine check` to ensure there are no security violations that can cause future regressions.
+1. Run `autorefine audit` to ensure there are no security violations that can cause future regressions.
 
 1. Run `autorefine troubleshoot` to sync with the test suite and use `git bisect` to find out what fix went wrong, get a detailed description of the problem and suggestions on how to fix it.
 
@@ -64,7 +64,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 1. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
 # Non-MVP ideas
-- `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine check` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
+- `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
 - `autorefine template [TEMPLATE_NAME]` to configure Quality Assurance and CI/CD tooling (Ruff, tox, towncrier, Sphinx, etc.) using a custom template (e.g. `autorefine template jaraco`)—feature for projects that don't intend to use a skeleton.
 - `autorefine breakdown` to create separate tickets for each fix in the roadmap in your workflow management tool (GitHub Projects, Jira, ClickUp, Asana, Trello, etc.).
 
