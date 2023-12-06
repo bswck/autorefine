@@ -59,7 +59,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 1. Run `autorefine troubleshoot` to sync with the test suite and use `git bisect` to find out what fix went wrong, get a detailed description of the problem and suggestions on how to fix it.
 
-1. Leave the rest for manual work.
+1. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
 
 1. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
