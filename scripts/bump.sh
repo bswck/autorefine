@@ -127,7 +127,7 @@ main() {
     export LAST_REF="45a69bc"
     export PROJECT_PATH_KEY="$$_skeleton_project_path"
     export NEW_REF_KEY="$$_skeleton_new_ref"
-    export LAST_LICENSE_NAME="MIT"
+    export LAST_LICENSE_NAME="GPL-3.0"
 
     cd "${PROJECT_PATH:=$(git rev-parse --show-toplevel)}" || exit 1
     echo

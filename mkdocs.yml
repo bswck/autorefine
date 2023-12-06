@@ -1,5 +1,5 @@
 site_name: "autorefine"
-site_description: "Automatically refactor, commit and PR."
+site_description: "Standardize the refactoring process."
 site_url: "https://autorefine.readthedocs.io/en/latest/"
 repo_url: "https://github.com/bswck/autorefine"
 repo_name: "bswck/autorefine"

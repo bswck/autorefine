@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/github/license/bswck/autorefine.svg?label=License)](https://github.com/bswck/autorefine/blob/HEAD/LICENSE)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-Automatically refactor, commit and PR.
+Standardize the refactoring process.
 
 The project is aimed to provide a framework for the entire process of refactoring Python projects
 from the very beginning to the very end:
@@ -123,4 +123,4 @@ Always happy to accept contributions! ❤️
 
 # Legal info
 © Copyright by Bartosz Sławecki ([@bswck](https://github.com/bswck)).
-<br />This software is licensed under the terms of [MIT License](https://github.com/bswck/autorefine/blob/HEAD/LICENSE).
+<br />This software is licensed under the terms of [GPL-3.0 License](https://github.com/bswck/autorefine/blob/HEAD/LICENSE).

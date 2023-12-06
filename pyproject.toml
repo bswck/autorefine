@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "autorefine"
 version = "0.0.0"
-description = "Automatically refactor, commit and PR."
+description = "Standardize the refactoring process."
 authors = ["bswck <bswck.dev@gmail.com>"]
-license = "MIT"
+license = "GPL-3.0"
 readme = "README.md"
 packages = [{ include = "autorefine/" }]
 homepage = "https://github.com/bswck/autorefine"

@@ -5,12 +5,12 @@ docs: true
 docs_slug: autorefine
 email_address: bswck.dev@gmail.com
 github_username: bswck
-license_name: MIT
+license_name: GPL-3.0
 org_full_name: Bartosz Sławecki
 package_name: autorefine
-project_description: Automatically refactor, commit and PR.
+project_description: Standardize the refactoring process.
 publish_on_pypi: true
-pypi_project_description: Automatically refactor, commit and PR.
+pypi_project_description: Standardize the refactoring process.
 pypi_project_name: autorefine
 python_version: '3.8'
 repo_name: autorefine
