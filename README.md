@@ -16,7 +16,7 @@ from the very beginning to the very end:
 - `autorefine roadmap`—create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
 - `autorefine plan`—create a delivery plan (like in the issue above),
 - `autorefine autopilot`—apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
-- `autorefine check`—ensure that the tests aren't broken,
+- `autorefine check`—ensure there are no security violations,
 - `autorefine troubleshoot`—sync with the test suite and use `git bisect` to find out what fix went wrong, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize`—create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
@@ -39,19 +39,30 @@ The project is planned to be a wrapper around the following well-tested & recogn
 - [GitHub CLI](https://cli.github.com/) for creating tickets.
 
 # Refactoring workflow
-1. First off, check for type annotations and add them if missing using MonkeyType.
+`autorefine` will be a CLI tool that will help you refactor a project in a few simple steps:
 
-1. Analyze the project and create a refactoring roadmap.
+1. Fork a repository you want to refactor.
 
-   1. Check for type errors using static type checkers.
+1. Create a new branch for refactoring.
 
-   1. Check for code style issues using linters.
+1. Run `autorefine configure` to run a wizard that will help you configure `autorefine`, configure security violation detection (`autorefine` will typically detect doctest, pytest and other tools that determine whether the project runs safe) and refactor the project for a specific choice of linting tools.
 
-1. Apply automatic fixes and commit them in reviewable chunks with meaningful descriptions.
+1. Run `autorefine analyze` to analyze the project with linters and type checkers. Autorefine now knows what needs to be fixed in the current HEAD.
+
+1. Run `autorefine roadmap` to create a refactoring roadmap. You will have a checklist of all the things that need to be fixed in the project automatically and manually.
+
+1. Run `autorefine plan` to create a delivery plan and set up iterations of the refactoring process. First off, you can start by a PR that aims to modernize the codebase (fixes in the roadmap will be grouped and you will be able to select which ones you want to apply in this iteration).
+
+1. Run `autorefine autopilot` to apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions.
+
+1. Run `autorefine check` to ensure there are no security violations that can cause future regressions.
+
+1. Run `autorefine troubleshoot` to sync with the test suite and use `git bisect` to find out what fix went wrong, get a detailed description of the problem and suggestions on how to fix it.
 
 1. Leave the rest for manual work.
 
-1. Create a PR.
+1. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
+
 
 # Get inspired
 - https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c
