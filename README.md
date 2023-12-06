@@ -13,11 +13,11 @@ Standardize the refactoring process.
 The project is aimed to provide a framework for the entire process of refactoring Python projects
 from the very beginning to the very end:
 - analyze the project,
-- create a refactoring roadmap,
-- create a delivery plan,
+- create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
+- create a delivery plan (like in the issue above),
 - apply automatic fixes and commit them in reviewable chunks with meaningful descriptions,
 - leave the rest for manual work,
-- create a PR.
+- create a PR (like https://github.com/CERT-Polska/malduck/issues/111).
 
 Created to accomplish https://github.com/jaraco/skeleton/issues/98 and personal use to raise awareness of best practices across the global Python community.
 
