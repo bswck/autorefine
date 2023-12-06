@@ -12,16 +12,16 @@ Mechanize the refactoring process to operate on a large scale.
 
 The project is aimed to provide a framework for the entire process of refactoring Python projects
 from the very beginning to the very end:
-- `autorefine analyze`—analyze the project with linters and type checkers,
-- `autorefine roadmap`—create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
-- `autorefine plan`—create a delivery plan (like in the issue above),
-- `autorefine autopilot`—apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
-- `autorefine audit`—ensure there are no security violations,
-- `autorefine troubleshoot`—sync with the test suite and use `git bisect` to find out what fix went wrong, describe the problem,
+- `autorefine analyze` → analyze the project with linters and type checkers,
+- `autorefine roadmap` → create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
+- `autorefine plan` → create a delivery plan (like in the issue above),
+- `autorefine autopilot` → apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
+- `autorefine audit` → ensure there are no security violations,
+- `autorefine troubleshoot` → using the configured auditing routine, `git bisect` to find out what fix went wrong, describe the problem,
 - leave the rest for manual work,
-- `autorefine finalize`—create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
+- `autorefine finalize` → create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
 
-Created to accomplish https://github.com/jaraco/skeleton/issues/98 and personal use to raise awareness of best practices across the global Python community.
+Created to accomplish https://github.com/jaraco/skeleton/issues/98 and for personal use to raise awareness of best practices across the Python community globally.
 
 # Planned tooling
 The project is planned to be a wrapper around the following well-tested & recognized tools:
@@ -44,7 +44,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 1. Create a new branch for refactoring.
 
-1. Run `autorefine configure` to run a wizard that will help you configure `autorefine`, configure security violation detection (`autorefine` will typically detect doctest, pytest and other tools that determine whether the project runs safe) and refactor the project for a specific choice of linting tools.
+1. Run `autorefine configure` to run a wizard that will help you configure `autorefine`, configure audits (`autorefine` will typically detect doctest, pytest and other tools that determine whether the project runs safe) and refactor the project for a specific choice of linting tools.
 
 1. Run `autorefine analyze` to analyze the project with linters and type checkers. Autorefine now knows what needs to be fixed in the current HEAD.
 
