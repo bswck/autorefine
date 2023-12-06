@@ -12,12 +12,12 @@ Standardize the refactoring process.
 
 The project is aimed to provide a framework for the entire process of refactoring Python projects
 from the very beginning to the very end:
-- analyze the project with linters and type checkers,
-- create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
-- create a delivery plan (like in the issue above),
-- apply automatic fixes and commit them in reviewable chunks with meaningful descriptions,
+- `autorefine analyze`—analyze the project with linters and type checkers,
+- `autorefine roadmap`—create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
+- `autorefine plan`—create a delivery plan (like in the issue above),
+- `autorefine autopilot`—apply automatic fixes and commit them in reviewable chunks with meaningful descriptions,
 - leave the rest for manual work,
-- create a PR (like https://github.com/CERT-Polska/malduck/issues/111).
+- `autorefine finalize`—create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
 
 Created to accomplish https://github.com/jaraco/skeleton/issues/98 and personal use to raise awareness of best practices across the global Python community.
 
