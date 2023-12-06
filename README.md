@@ -10,13 +10,13 @@
 
 Mechanize the refactoring process to operate on a large scale.
 
-The project is aimed to provide a framework for the entire process of refactoring Python projects
+The project is aimed to provide a framework for the process of refactoring Python projects
 from the very beginning to the very end:
 - `autorefine analyze` → analyze the project with linters and type checkers,
 - `autorefine roadmap` → create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
 - `autorefine plan` → create a delivery plan (like in the issue above),
 - `autorefine autopilot` → apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
-- `autorefine audit` → ensure there are no security violations,
+- `autorefine audit` → typically run tests and other tools that determine whether the project runs safe,
 - `autorefine troubleshoot` → using the configured auditing task, `git bisect` to find out what fix went wrong, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize` → create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
@@ -50,17 +50,17 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 1. Run `autorefine roadmap` to create a refactoring roadmap. You will have a checklist of all the things that need to be fixed in the project automatically and manually.
 
-1. Run `autorefine plan` to create a delivery plan and set up iterations of the refactoring process. First off, you can start by a PR that aims to modernize the codebase (fixes in the roadmap will be grouped and you will be able to select which ones you want to apply in this iteration).
+2. Run `autorefine plan` to create a delivery plan and set up iterations of the refactoring process. For example, you can start off by a PR that aims to modernize the codebase and does not change the implementation (fixes in the roadmap will be grouped and you will be able to select which ones you want to apply in this iteration), that would be the first iteration, and then apply some implementation-changing autofixes, such as replacing `f"'{x}'"` with `f"{x!r}"`—that could be the second iteration. Having a delivery plan will make `autorefine` create a PR for each iteration, so that you can review the changes and merge them separately.
 
-1. Run `autorefine autopilot` to apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions.
+3. Run `autorefine autopilot` to apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions.
 
-1. Run `autorefine audit` to prevent future regressions.
+4. Run `autorefine audit` to prevent future regressions.
 
-2. Run `autorefine troubleshoot` to repeatedly call `autorefine audit` within `git bisect` to find out what fix went wrong, and get a detailed description of the problem and suggestions on how to fix it.
+5. Run `autorefine troubleshoot` to repeatedly call `autorefine audit` within `git bisect` to find out what fix went wrong, and get a detailed description of the problem and suggestions on how to fix it.
 
-3. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
+6. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
 
-4. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
+7. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
 # Non-MVP ideas
 - `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
