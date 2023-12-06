@@ -22,6 +22,7 @@ from the very beginning to the very end:
 Created to accomplish https://github.com/jaraco/skeleton/issues/98 and personal use to raise awareness of best practices across the global Python community.
 
 # Planned tooling
+The project is planned to be a wrapper around the following well-tested & recognized tools:
 - [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
 - [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
 - [Ruff](https://github.com/astral-sh/ruff#readme) for automatic fixes and planning of manual refactoring steps,
@@ -32,7 +33,8 @@ Created to accomplish https://github.com/jaraco/skeleton/issues/98 and personal 
   - [pytype](https://github.com/google/pytype#readme),
 - [diff-cover](https://github.com/Bachmann1234/diff_cover#readme) for [coverage](https://github.com/nedbat/coverage#readme) reports on fixes,
 - [smokeshow](https://github.com/samuelcolvin/smokeshow#readme) for hosting detailed refactoring roadmaps and delivery plans,
-- [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables.
+- [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables,
+- [GitHub CLI](https://cli.github.com/) for creating tickets.
 
 # Refactoring workflow
 1. First off, check for type annotations and add them if missing using MonkeyType.
