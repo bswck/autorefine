@@ -66,6 +66,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 # Non-MVP ideas
 - `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine check` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
 - `autorefine template [TEMPLATE_NAME]` to configure Quality Assurance and CI/CD tooling (Ruff, tox, towncrier, Sphinx, etc.) using a custom template (e.g. `autorefine template jaraco`)—feature for projects that don't intend to use a skeleton.
+- `autorefine breakdown` to create separate tickets for each fix in the roadmap in your workflow management tool (GitHub Projects, Jira, ClickUp, Asana, Trello, etc.).
 
 # Get inspired
 - https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c
