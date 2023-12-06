@@ -54,13 +54,13 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 1. Run `autorefine autopilot` to apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions.
 
-1. Run `autorefine audit` to ensure there are no security violations that can cause future regressions.
+1. Run `autorefine audit` to prevent future regressions.
 
-1. Run `autorefine troubleshoot` to sync with the test suite and use `git bisect` to find out what fix went wrong, get a detailed description of the problem and suggestions on how to fix it.
+2. Run `autorefine troubleshoot` to repeatedly call `autorefine audit` within `git bisect` to find out what fix went wrong, and get a detailed description of the problem and suggestions on how to fix it.
 
-1. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
+3. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
 
-1. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
+4. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
 # Non-MVP ideas
 - `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
