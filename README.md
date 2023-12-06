@@ -12,14 +12,14 @@ Mechanize the refactoring process to operate on a large scale.
 
 The project is aimed to provide a framework for the process of refactoring Python projects
 from the very beginning to the very end:
-- `autorefine analyze` → analyze the project with linters and type checkers,
-- `autorefine roadmap` → create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
-- `autorefine plan` → create a delivery plan (like in the issue above),
-- `autorefine autopilot` → apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
-- `autorefine audit` → typically run tests and other tools that determine whether the project runs safe,
-- `autorefine troubleshoot` → using the configured auditing task, `git bisect` to find out what fix went wrong, describe the problem,
+- `autorefine analyze` → **analyze the project** with linters and type checkers,
+- `autorefine roadmap` → **create a refactoring roadmap** (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
+- `autorefine plan` → **create a delivery plan** (like in the issue above),
+- `autorefine autopilot` → **apply automatic fixes** and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
+- `autorefine audit` → typically **run tests** and other tools that determine whether the project runs safe,
+- `autorefine troubleshoot` → using the configured **auditing task**, `git bisect` to **find out what fix went wrong**, describe the problem,
 - leave the rest for manual work,
-- `autorefine finalize` → create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
+- `autorefine finalize` → **create a PR** (like https://github.com/CERT-Polska/malduck/issues/111) to finalize the current iteration of refactoring with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
 
 Created to accomplish https://github.com/jaraco/skeleton/issues/98 and for personal use to raise awareness of best practices across the Python community globally.
 
@@ -60,7 +60,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 6. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
 
-7. Run `autorefine finalize` to create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
+7. Run `autorefine finalize` to finalize the current iteration and create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
 # Non-MVP ideas
 - `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
