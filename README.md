@@ -15,7 +15,9 @@ from the very beginning to the very end:
 - `autorefine analyze`—analyze the project with linters and type checkers,
 - `autorefine roadmap`—create a refactoring roadmap (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
 - `autorefine plan`—create a delivery plan (like in the issue above),
-- `autorefine autopilot`—apply automatic fixes and commit them in reviewable chunks with meaningful descriptions,
+- `autorefine autopilot`—apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
+- `autorefine check`—ensure that the tests aren't broken,
+- `autorefine troubleshoot`—sync with the test suite and use `git bisect` to find out what fix went wrong, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize`—create a PR (like https://github.com/CERT-Polska/malduck/issues/111) with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
 
