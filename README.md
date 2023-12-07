@@ -17,7 +17,7 @@ from the very beginning to the very end:
 - `autorefine plan` → **create a delivery plan** (like in the issue above) to split the refactoring process into **a sequence of iterations**,
 - `autorefine autopilot` → **apply automatic fixes** and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
 - `autorefine audit` → typically **run tests** and other tools that determine whether the project runs safe,
-- `autorefine troubleshoot` → using the configured **auditing task**, `git bisect` to **find out what fix went wrong**, describe the problem,
+- `autorefine troubleshoot` → using the configured **auditing task** repeatedly when running `git bisect` to **find out what fix went wrong**, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize` → **create a PR** (like https://github.com/CERT-Polska/malduck/issues/111) to finalize the current iteration of refactoring with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
 
