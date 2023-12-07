@@ -3,7 +3,7 @@
 
 name: Share your feedback about the project vision
 description: Criticism is very welcome. The author is happy to learn from experts and use their advices!
-labels: [enhancement]
+labels: [feedback]
 body:
   - type: markdown
     attributes:
