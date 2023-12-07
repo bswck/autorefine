@@ -14,11 +14,7 @@ body:
       description: Describe what you dislike the most about the idea. Do you mind sharing an advice that will potentially lead the project to a better direction?
   - type: textarea
     attributes:
-      label: Would you use `autorefine` for automating the refactoring process of your product?
-      description: If no, what would convince you to use it?
-  - type: textarea
-    attributes:
-      label: Would you use this code for automating the refactoring process of your product?
+      label: Would you use autorefine for automating the refactoring process of your product?
       description: If yes, what especially do you value about the project? Otherwise, what change in `autorefine` would convince you to use it? What would be your requirements?
   - type: textarea
     attributes:
