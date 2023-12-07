@@ -1,0 +1,29 @@
+# docs https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+
+name: Share your feedback about the project vision
+description: Criticism is very welcome. The author is happy to learn from experts and use their advices!
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "The form below may help you in sharing your feedback. However, feel free to [open a blank issue](https://github.com/bswck/autorefine/issues/new) instead."
+  - type: textarea
+    attributes:
+      label: What are your concerns about the project and the initiative?
+      description: Describe what you dislike the most about the idea. Do you mind sharing an advice that will potentially lead the project to a better direction?
+  - type: textarea
+    attributes:
+      label: Would you use `autorefine` for automating the refactoring process of your product?
+      description: If no, what would convince you to use it?
+  - type: textarea
+    attributes:
+      label: Would you use this code for automating the refactoring process of your product?
+      description: If yes, what especially do you value about the project? Otherwise, what change in `autorefine` would convince you to use it? What would be your requirements?
+  - type: textarea
+    attributes:
+      label: What advices would you give to make this project really useful?
+      description: Any lectures, articles, talks and free thoughts on the topic are very welcome. 
+  - type: markdown
+    attributes:
+      value: "Thank you for your time spent on sharing your feedback! Have an amazing day! The author assumes your feedback to be shared on [the Beerware license](https://fedoraproject.org/wiki/Licensing/Beerware) and would be happy to comply to its terms. --[bswck](https://github.com/bswck)"
