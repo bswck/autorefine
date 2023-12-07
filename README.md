@@ -102,11 +102,6 @@ pipx install autorefine
 
     <sub>If you encounter any problems, refer to [the official documentation](https://python-poetry.org/docs/#installation) for the most up-to-date installation instructions.</sub>
 
-    If you want to use pipx to install dev dependencies as well, install the [poetry apps](https://github.com/bswck/poetry-apps#readme) plugin:
-    ```shell
-    pipx inject poetry poetry-apps
-    ```
-
     Be sure to have Python 3.8 installed—if you use [pyenv](https://github.com/pyenv/pyenv#readme), simply run:
 
     ```shell
