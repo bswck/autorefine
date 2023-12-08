@@ -84,6 +84,11 @@ pipx install autorefine
 
 ## …contribute to [autorefine](https://github.com/bswck/autorefine) 🚀
 
+<!--
+This section was generated from bswck/skeleton@16e99df.
+Instead of changing this particular file, you might want to alter the template:
+https://github.com/bswck/skeleton/tree/16e99df/fragments/guide.md
+-->
 
 > [!Note]
 > If you use Windows, it is highly recommended to complete the installation in the way presented below through [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).

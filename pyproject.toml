@@ -1,3 +1,7 @@
+# This file was generated from bswck/skeleton@16e99df.
+# Instead of changing this particular file, you might want to alter the template:
+# https://github.com/bswck/skeleton/tree/16e99df/project/pyproject.toml.jinja
+
 [tool.poetry]
 name = "autorefine"
 version = "0.0.1"
@@ -14,11 +18,15 @@ Issues = "https://github.com/bswck/autorefine/issues"
 Distribution = "https://pypi.org/project/autorefine/"
 Coverage = "https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autorefine"
 
-
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<=3.12"
 
 [tool.poetry.group.dev.dependencies]
+
+[tool.poetry.group.dev-skeleton.dependencies]
+# This dependency group was generated from bswck/skeleton@16e99df.
+# Instead of changing this particular file, you might want to alter the template:
+# https://github.com/bswck/skeleton/tree/16e99df/project/pyproject.toml.jinja
 mypy = "^1.7.0"
 ruff = "^0.1.2"
 towncrier = "^23.11.0"
@@ -27,8 +35,6 @@ coverage = "^7.3.2"
 poethepoet = "^0.24.3"
 pre-commit = "^3.5.0"
 smokeshow = "^0.4.0"
-
-
 [tool.poetry.group.docs]
 optional = true
 
@@ -40,12 +46,11 @@ mkdocstrings = { version = ">=0.19.0", extras = ["python"] }
 [tool.poe.tasks]
 test = "pytest -v"
 lint = "ruff check ."
-lock = "scripts/lock.sh"
-bump = "scripts/bump.sh"
+reanswer = "scripts/skeleton.sh reanswer"
+bump = "scripts/skeleton.sh bump"
 check = [
     { ref="test" },
     { ref="lint" },
-    { ref="lock" },
 ]
 release.script = "scripts.release:main"
 
@@ -123,7 +128,7 @@ package = "autorefine"
 filename = "CHANGELOG.md"
 start_string = "<!-- insertion marker -->\n"
 underlines = ["", "", ""]  # We use Markdown
-title_format = "## [{version}](https://github.com/bswck/autorefine/tree/{version}) – {project_date}"
+title_format = "## [{version}](https://github.com/bswck/autorefine/tree/{version}) ({project_date})"
 issue_format = "[#{issue}](https://github.com/bswck/autorefine/issues/{issue})"
 
 [[tool.towncrier.type]]

@@ -1,3 +1,7 @@
+# This file was generated from bswck/skeleton@16e99df.
+# Instead of changing this particular file, you might want to alter the template:
+# https://github.com/bswck/skeleton/tree/16e99df/project/.github/workflows/%23%25%20if%20public%20%25%23smokeshow.yml%23%25%20endif%20%25%23.jinja
+
 name: "Smokeshow"
 
 on:
@@ -14,7 +18,7 @@ jobs:
     runs-on: "ubuntu-latest"
     environment: "Smokeshow"
     steps:
-    - uses: "actions/setup-python@v4"
+    - uses: "actions/setup-python@v5"
       with:
         python-version: "3.8"
     - run: "pip install smokeshow"

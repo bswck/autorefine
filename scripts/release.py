@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Note:
-# If you want to change this file, you might want to do it at the infrastructure
-# level. See https://github.com/bswck/skeleton.
+# This file was generated from bswck/skeleton@16e99df.
+# Instead of changing this particular file, you might want to alter the template:
+# https://github.com/bswck/skeleton/tree/16e99df/project/scripts/release.py.jinja
+#
 """
 Automate the release process by updating local files, creating and pushing a new tag.
 
@@ -67,13 +68,13 @@ def _setup_logging() -> None:
     _LOGGER.addHandler(_logger_handler)
 
 
-def release(version: str, /) -> None:
+def release(*, version: str) -> None:
     """Release a semver version."""
     cmd, shell = str.split, functools.partial(subprocess.run, check=True)
 
     changed_files = _decode_if_bytes(
         shell(
-            cmd("git diff --name-only HEAD"),
+            cmd("git status --porcelain"),
             capture_output=True,
         ).stdout
     )
@@ -121,7 +122,7 @@ def release(version: str, /) -> None:
 
     changed_for_release = _decode_if_bytes(
         shell(
-            cmd("git diff --name-only HEAD"),
+            cmd("git status --porcelain"),
             capture_output=True,
         ).stdout
     )
@@ -199,13 +200,8 @@ def main(argv: list[str] | None = None) -> None:
     _setup_logging()
 
     parser = argparse.ArgumentParser(description="Release a semver version.")
-    parser.add_argument(
-        "version",
-        type=str,
-        nargs=1,
-    )
-    args: argparse.Namespace = parser.parse_args(argv)
-    release(args.version.pop())
+    parser.add_argument("version", type=str, required=True)
+    release(**vars(parser.parse_args(argv)))
 
 
 if __name__ == "__main__":

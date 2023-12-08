@@ -1,3 +1,7 @@
+# This file was generated from bswck/skeleton@16e99df.
+# Instead of changing this particular file, you might want to alter the template:
+# https://github.com/bswck/skeleton/tree/16e99df/project/.github/workflows/%23%25%20if%20test_suite%20%25%23test.yml%23%25%20endif%20%25%23.jinja
+
 name: "Tests"
 
 on: ["push"]
@@ -12,7 +16,7 @@ jobs:
     steps:
     - uses: "actions/checkout@v4"
     - name: "Set up Python ${{matrix.python-version}}"
-      uses: "actions/setup-python@v3"
+      uses: "actions/setup-python@v5"
       with:
         python-version: "${{matrix.python-version}}"
     - name: "Install the project"

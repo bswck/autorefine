@@ -1,32 +1,28 @@
 #!/usr/bin/env bash
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Sync with bswck/skeleton.
-# This script was adopted from https://github.com/bswck/skeleton/tree/ae71d66/project/scripts/bump.sh.jinja
+# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/16e99df).
+#
+# This file was generated from bswck/skeleton@16e99df.
+# Instead of changing this particular file, you might want to alter the template:
+# https://github.com/bswck/skeleton/tree/16e99df/project/scripts/skeleton.sh.jinja
 #
 # Usage:
+#
+# To update to the latest version:
 # $ poe bump
+#
+# To update to version 1.2.3:
+# $ poe bump 1.2.3
+#
+# To make a mechanized repo patch, but keep the current skeleton version:
+# $ poe reanswer
+#
+# It's intended to be impossible to make a mechanized repo patch and update the skeleton
+# at the same time.
 
 # shellcheck disable=SC2005
-
-
-# Automatically copied from https://github.com/bswck/skeleton/tree/ae71d66/handle-task-event.sh
-make_token() {
-    export TOKEN
-    TOKEN="$(echo "$(date +%s%N)" | sha256sum | head -c "${1:-10}")"
-}
-
-stash() {
-    make_token 32
-    export STASH_TOKEN="$TOKEN"
-    git stash push -m "$STASH_TOKEN"
-}
-
-unstash() {
-    STASH_ID="$(echo "$("$(git stash list)" | grep "${1:-STASH_TOKEN}" | grep -oP "^stash@{\K(\d)+")")"
-    git stash pop "stash@{$STASH_ID}"
-}
-
+# Automatically copied from https://github.com/bswck/skeleton/tree/16e99df/handle-task-event.sh
 setup_gh() {
     echo "Calling GitHub setup hooks..."
     supply_smokeshow_key
@@ -40,7 +36,7 @@ determine_project_path() {
 
 ensure_gh_environment() {
     # Ensure that the GitHub environment exists
-    echo "$(jq -n '{"deployment_branch_policy": {"protected_branches": false, "custom_branch_policies": true}}' | gh api -H "Accept: application/vnd.github+json" -X PUT "/repos/bswck/autorefine/environments/$1" --input -)" > /dev/null 2>&1 || return 1
+    echo "$(jq -n '{"deployment_branch_policy": {"protected_branches": false,"custom_branch_policies": true}}' | gh api -H "Accept: application/vnd.github+json" -X PUT "/repos/bswck/autorefine/environments/$1" --input -)" > /dev/null 2>&1 || return 1
 }
 
 supply_smokeshow_key() {
@@ -63,7 +59,6 @@ supply_smokeshow_key() {
 }
 # End of copied code
 
-
 determine_new_ref() {
     # Determine the new skeleton revision set by the child process
     export NEW_REF
@@ -72,10 +67,11 @@ determine_new_ref() {
 
 before_update_algorithm() {
     # Stash changes if any
-    if test "$(echo "$(git diff --name-only)")"
+    if test "$(git status --porcelain)"
     then
-        echo "There are uncommitted changes in the project."
-        stash
+        echo "There are uncommitted changes in the project." 1>&2
+        echo "Stash them and continue." 1>&2
+        return 1
     else
         echo "Working tree clean, no need to stash."
     fi
@@ -83,7 +79,19 @@ before_update_algorithm() {
 
 run_update_algorithm() {
     # Run the underlying update algorithm
-    copier update --trust --vcs-ref "${1:-"HEAD"}" "${@:2}" || return 1
+    export MODE
+    SKELETON_COMMAND="${1:-"bump"}"
+    if test "$SKELETON_COMMAND" = "bump"
+    then
+        copier update --trust --vcs-ref "${2:-"HEAD"}" --defaults || return 1
+    elif test "$SKELETON_COMMAND" = "reanswer"
+    then
+        # shellcheck disable=SC2068
+        copier update --trust --vcs-ref "$LAST_REF" ${@:3} || return 1
+    else
+        echo "Unknown update algorithm: '$1'"
+        return 1
+    fi
     determine_new_ref
     determine_project_path
 }
@@ -91,17 +99,14 @@ run_update_algorithm() {
 after_update_algorithm() {
     # Run post-update hooks, auto-commit changes
     cd "$PROJECT_PATH" || exit 1
-
     echo "Previous skeleton revision: $LAST_REF"
     echo "Current skeleton revision: ${NEW_REF:-"N/A"}"
-
     local REVISION_PARAGRAPH="Skeleton revision: https://github.com/bswck/skeleton/tree/${NEW_REF:-"HEAD"}"
-
     git add .
     if test "$LAST_REF" = "$NEW_REF"
     then
         echo "The version of the skeleton has not changed."
-        local COMMIT_MSG="Patch .copier-answers.yml at bswck/skeleton@$NEW_REF"
+        local COMMIT_MSG="Mechanized patch at bswck/skeleton@$NEW_REF"
     else
         if test "$NEW_REF"
         then
@@ -116,19 +121,13 @@ after_update_algorithm() {
     read -r || exit 1
     git commit --no-verify -m "$COMMIT_MSG" -m "$REVISION_PARAGRAPH"
     setup_gh
-    if test "$STASH_TOKEN"
-    then
-        echo "Unstashing changes..."
-        unstash && echo "Done!"
-    fi
 }
 
 main() {
-    export LAST_REF="ae71d66"
+    export LAST_REF="16e99df"
     export PROJECT_PATH_KEY="$$_skeleton_project_path"
     export NEW_REF_KEY="$$_skeleton_new_ref"
     export LAST_LICENSE_NAME="GPL-3.0"
-
     cd "${PROJECT_PATH:=$(git rev-parse --show-toplevel)}" || exit 1
     echo
     echo "--- Last skeleton revision: $LAST_REF"
