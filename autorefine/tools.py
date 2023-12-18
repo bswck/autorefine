@@ -1,33 +1,78 @@
-from abc import ABCMeta
+from __future__ import annotations
+
+from abc import ABCMeta, abstractmethod
+from typing import TYPE_CHECKING
+
+from pydantic.dataclasses import dataclass
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
-class Tool:
+@dataclass(frozen=True)
+class Check:
+    line: int
+    column: int
+    message: str
+    identifier: str
+    classifier: str
+    fixer: Fixer
+
+    def fix(self) -> None:
+        self.fixer.fix(self)
+
+    def dump(self) -> dict[str, str | int]:
+        return {
+            "line": self.line,
+            "column": self.column,
+            "message": self.message,
+            "identifier": self.identifier,
+            "classifier": self.classifier,
+        }
+
+
+class CommandLineTool(metaclass=ABCMeta):
+    """Base class for all tools."""
+
+    def __init__(self, path: Path[str]) -> None:
+        self.path = path
+
+    @abstractmethod
+    @property
+    def version(self) -> str:
+        raise NotImplementedError
+
+
+class Checker(CommandLineTool, metaclass=ABCMeta):
+    def get_checks(self, path: Path[str]) -> list[Check]:
+        raise NotImplementedError
+
+
+class Auditor(CommandLineTool, metaclass=ABCMeta):
     pass
 
 
-class Auditor(Tool, metaclass=ABCMeta):
+class Fixer(CommandLineTool, metaclass=ABCMeta):
     pass
 
 
-class Linter(Tool, metaclass=ABCMeta):
+class ChangeLogger(CommandLineTool, metaclass=ABCMeta):
     pass
 
 
-class ChangeLogger(Tool, metaclass=ABCMeta):
+class VersionControlSystem(CommandLineTool, metaclass=ABCMeta):
+    def get_revision(self) -> str:
+        raise NotImplementedError
+
+
+class FixViewer(CommandLineTool, metaclass=ABCMeta):
+    def view_diff(self, path: Path[str], fix: Check) -> None:
+        raise NotImplementedError
+
+
+class Deployer(CommandLineTool, metaclass=ABCMeta):
     pass
 
 
-class VersionControlSystem(Tool, metaclass=ABCMeta):
-    pass
-
-
-class FixViewer(Tool, metaclass=ABCMeta):
-    pass
-
-
-class Deployer(Tool, metaclass=ABCMeta):
-    pass
-
-
-class TypeChecker(Tool, metaclass=ABCMeta):
+class TypeChecker(CommandLineTool, metaclass=ABCMeta):
     pass
