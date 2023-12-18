@@ -11,11 +11,9 @@
 Mechanize the refactoring process to operate on a large scale.
 
 # Installation
-If you want to…
 
 
 
-## …use this tool in your project 💻
 You might simply install it with pip:
 
 ```shell
@@ -28,12 +26,12 @@ If you use [Poetry](https://python-poetry.org/), then run:
 poetry add autorefine
 ```
 
-## …contribute to [autorefine](https://github.com/bswck/autorefine) 🚀
+## For contributors
 
 <!--
-This section was generated from bswck/skeleton@16e99df.
+This section was generated from bswck/skeleton@01e08d2.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/16e99df/fragments/guide.md
+https://github.com/bswck/skeleton/tree/01e08d2/fragments/guide.md
 -->
 
 !!! Note

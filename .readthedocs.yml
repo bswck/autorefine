@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@16e99df.
+# This file was generated from bswck/skeleton@01e08d2.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/16e99df/project/%23%25%20if%20docs%20%25%23.readthedocs.yml%23%25%20endif%20%25%23.jinja
+# https://github.com/bswck/skeleton/tree/01e08d2/project/%23%25%20if%20docs%20%25%23.readthedocs.yml%23%25%20endif%20%25%23.jinja
 #
 # Read the Docs configuration file
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
