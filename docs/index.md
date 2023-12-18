@@ -29,9 +29,9 @@ poetry add autorefine
 ## For contributors
 
 <!--
-This section was generated from bswck/skeleton@01e08d2.
+This section was generated from bswck/skeleton@65cc40e.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/01e08d2/fragments/guide.md
+https://github.com/bswck/skeleton/tree/65cc40e/fragments/guide.md
 -->
 
 !!! Note

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# This file was generated from bswck/skeleton@01e08d2.
+# This file was generated from bswck/skeleton@65cc40e.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/01e08d2/project/scripts/release.py.jinja
+# https://github.com/bswck/skeleton/tree/65cc40e/project/scripts/release.py.jinja
 #
 """
 Automate the release process by updating local files, creating and pushing a new tag.
@@ -64,7 +64,7 @@ def release(version: str, /) -> None:
     """Release a semver version."""
     command, run = (
         subprocess.getoutput,
-        lambda prompt: subprocess.run(*prompt, check=True),
+        lambda *prompt: subprocess.run([*prompt], check=True),
     )
 
     changed_files = command("git status --porcelain")

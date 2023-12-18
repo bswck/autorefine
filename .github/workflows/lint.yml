@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@01e08d2.
+# This file was generated from bswck/skeleton@65cc40e.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/01e08d2/project/.github/workflows/lint.yml.jinja
+# https://github.com/bswck/skeleton/tree/65cc40e/project/.github/workflows/lint.yml.jinja
 
 name: "Lint"
 
