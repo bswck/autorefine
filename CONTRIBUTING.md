@@ -1,7 +1,7 @@
 <!--
-This file was generated from bswck/skeleton@65cc40e.
+This file was generated from bswck/skeleton@e08c6ca.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/65cc40e/fragments/contributing.md
+https://github.com/bswck/skeleton/tree/e08c6ca/fragments/contributing.md
 -->
 # Contributing to [autorefine](https://github.com/bswck/autorefine) 🎉
 Contributions are very welcome. 🚀
@@ -18,7 +18,8 @@ Anything tagged with "enhancement" is open to whoever wants to implement it.
 
 ## Write documentation 📖
 The project could always use more documentation, whether as part of the official project
-docs. If you're interested in helping out, check the [docs/](https://github.com/bswck/autorefine/tree/HEAD/docs) folder in the repository.
+docs. If you're interested in helping out, check the [docs/](https://github.com/bswck/autorefine/tree/HEAD/docs)
+folder in the repository.
 
 ## Share your feedback 🌍
 The best way to send feedback is to file an issue in the [issue tracker](https://github.com/bswck/autorefine).
@@ -45,9 +46,9 @@ Ready to contribute? Here's a quick guide on how to set up autorefine and make a
 
 
 <!--
-This section was generated from bswck/skeleton@65cc40e.
+This section was generated from bswck/skeleton@e08c6ca.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/65cc40e/fragments/guide.md
+https://github.com/bswck/skeleton/tree/e08c6ca/fragments/guide.md
 -->
 
 > [!Note]
