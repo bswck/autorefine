@@ -1,4 +1,4 @@
-_commit: e08c6ca
+_commit: ecf53d2
 _src_path: gh:bswck/skeleton
 author_username: bswck
 docs: true
@@ -15,6 +15,6 @@ pypi_project_description: Mechanize the refactoring process to operate on a larg
 pypi_project_name: autorefine
 python_version: '3.8'
 repo_name: autorefine
-test_suite: true
+tests: true
 use_precommit: true
 visibility: public

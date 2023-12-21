@@ -1,5 +1,8 @@
 
-# autorefine [![Package version](https://img.shields.io/pypi/v/autorefine?label=PyPI)](https://pypi.org/project/autorefine/) [![Supported Python versions](https://img.shields.io/pypi/pyversions/autorefine.svg?logo=python&label=Python)](https://pypi.org/project/autorefine/)
+# autorefine [![skeleton](https://img.shields.io/badge/ecf53d2-skeleton?label=%F0%9F%92%80%20bswck/skeleton&labelColor=black&color=grey&link=https%3A//github.com/bswck/skeleton)](https://github.com/bswck/skeleton/tree/ecf53d2)
+[![Package version](https://img.shields.io/pypi/v/autorefine?label=PyPI)](https://pypi.org/project/autorefine/)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/autorefine.svg?logo=python&label=Python)](https://pypi.org/project/autorefine/)
+
 [![Tests](https://github.com/bswck/autorefine/actions/workflows/test.yml/badge.svg)](https://github.com/bswck/autorefine/actions/workflows/test.yml)
 [![Coverage](https://coverage-badge.samuelcolvin.workers.dev/bswck/autorefine.svg)](https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autorefine)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
@@ -81,9 +84,9 @@ pipx install autorefine
 ## For contributors
 
 <!--
-This section was generated from bswck/skeleton@e08c6ca.
+This section was generated from bswck/skeleton@ecf53d2.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/e08c6ca/project/README.md.jinja
+https://github.com/bswck/skeleton/tree/ecf53d2/project/README.md.jinja
 -->
 
 > [!Note]

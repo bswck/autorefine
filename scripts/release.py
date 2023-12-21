@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# This file was generated from bswck/skeleton@e08c6ca.
+# This file was generated from bswck/skeleton@ecf53d2.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/e08c6ca/project/scripts/release.py.jinja
+# https://github.com/bswck/skeleton/tree/ecf53d2/project/scripts/release.py.jinja
 #
 """
 Automate the release process by updating local files, creating and pushing a new tag.
@@ -92,7 +92,7 @@ def release(version: str, /) -> None:
     )
 
     if not do_release:
-        _abort(f"You said no when prompted to bump to the {version!r} version.")
+        _abort(f"You said no when prompted to upgrade to the {version!r} version.")
 
     _LOGGER.info("Bumping to the %r version", version)
     _run("poetry", "version", version)

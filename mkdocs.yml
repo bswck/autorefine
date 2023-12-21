@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@e08c6ca.
+# This file was generated from bswck/skeleton@ecf53d2.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/e08c6ca/project/%23%25%20if%20docs%20%25%23mkdocs.yml%23%25%20endif%20%25%23.jinja
+# https://github.com/bswck/skeleton/tree/ecf53d2/project/%23%25%20if%20docs%20%25%23mkdocs.yml%23%25%20endif%20%25%23.jinja
 
 site_name: "autorefine"
 site_description: "Mechanize the refactoring process to operate on a large scale."

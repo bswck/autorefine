@@ -1,28 +1,28 @@
 #!/usr/bin/env bash
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/e08c6ca).
+# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/ecf53d2).
 #
-# This file was generated from bswck/skeleton@e08c6ca.
+# This file was generated from bswck/skeleton@ecf53d2.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/e08c6ca/project/scripts/skeleton.sh.jinja
+# https://github.com/bswck/skeleton/tree/ecf53d2/project/scripts/skeleton.sh.jinja
 #
 # Usage:
 #
 # To update to the latest version:
-# $ poe bump
+# $ poe skeleton upgrade
 #
 # To update to version 1.2.3:
-# $ poe bump 1.2.3
+# $ poe skeleton upgrade 1.2.3
 #
 # To make a mechanized repo patch, but keep the current skeleton version:
-# $ poe reanswer
+# $ poe skeleton patch
 #
 # It's intended to be impossible to make a mechanized repo patch and update the skeleton
 # at the same time.
 
 # shellcheck disable=SC2005
-# Automatically copied from https://github.com/bswck/skeleton/tree/e08c6ca/handle-task-event.sh
+# Automatically copied from https://github.com/bswck/skeleton/tree/ecf53d2/handle-task-event.sh
 setup_gh() {
     echo "Calling GitHub setup hooks..."
     supply_smokeshow_key
@@ -80,11 +80,11 @@ before_update_algorithm() {
 run_update_algorithm() {
     # Run the underlying update algorithm
     export MODE
-    SKELETON_COMMAND="${1:-"bump"}"
-    if test "$SKELETON_COMMAND" = "bump"
+    SKELETON_COMMAND="${1:-"upgrade"}"
+    if test "$SKELETON_COMMAND" = "upgrade"
     then
         copier update --trust --vcs-ref "${2:-"HEAD"}" --defaults || return 1
-    elif test "$SKELETON_COMMAND" = "reanswer"
+    elif test "$SKELETON_COMMAND" = "patch"
     then
         # shellcheck disable=SC2068
         copier update --trust --vcs-ref "$LAST_REF" ${@:3} || return 1
@@ -124,7 +124,7 @@ after_update_algorithm() {
 }
 
 main() {
-    export LAST_REF="e08c6ca"
+    export LAST_REF="ecf53d2"
     export PROJECT_PATH_KEY="$$_skeleton_project_path"
     export NEW_REF_KEY="$$_skeleton_new_ref"
     export LAST_LICENSE_NAME="GPL-3.0"
@@ -132,25 +132,25 @@ main() {
     echo
     echo "--- Last skeleton revision: $LAST_REF"
     echo
-    echo "UPDATE ROUTINE [1/3]: Running pre-update hooks."
-    echo "[---------------------------------------------]"
+    echo "UPGRADE ROUTINE [1/3]: Running pre-update hooks."
+    echo "[----------------------------------------------]"
     before_update_algorithm || exit 1
-    echo "[---------------------------------------------]"
-    echo "UPDATE ROUTINE [1/3] COMPLETE. ✅"
+    echo "[----------------------------------------------]"
+    echo "UPGRADE ROUTINE [1/3] COMPLETE. ✅"
     echo
-    echo "UPDATE ROUTINE [2/3]: Running the underlying update algorithm."
-    echo "[------------------------------------------------------------]"
+    echo "UPGRADE ROUTINE [2/3]: Running the underlying update algorithm."
+    echo "[-------------------------------------------------------------]"
     run_update_algorithm "$@" || exit 1
-    echo "[------------------------------------------------------------]"
-    echo "UPDATE ROUTINE [2/3] COMPLETE. ✅"
+    echo "[-------------------------------------------------------------]"
+    echo "UPGRADE ROUTINE [2/3] COMPLETE. ✅"
     echo
     echo "--- Project path: $PROJECT_PATH"
     echo
-    echo "UPDATE ROUTINE [3/3]: Running post-update hooks."
-    echo "[----------------------------------------------]"
+    echo "UPGRADE ROUTINE [3/3]: Running post-update hooks."
+    echo "[-----------------------------------------------]"
     after_update_algorithm
-    echo "[----------------------------------------------]"
-    echo "UPDATE ROUTINE [3/3] COMPLETE. ✅"
+    echo "[-----------------------------------------------]"
+    echo "UPGRADE ROUTINE [3/3] COMPLETE. ✅"
     echo
     echo "Done! 🎉"
     echo
