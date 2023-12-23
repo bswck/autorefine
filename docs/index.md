@@ -1,5 +1,5 @@
 
-# autorefine [![skeleton](https://img.shields.io/badge/ecf53d2-skeleton?label=%F0%9F%92%80%20bswck/skeleton&labelColor=black&color=grey&link=https%3A//github.com/bswck/skeleton)](https://github.com/bswck/skeleton/tree/ecf53d2)
+# autorefine [![skeleton](https://img.shields.io/badge/837babb-skeleton?label=%F0%9F%92%80%20bswck/skeleton&labelColor=black&color=grey&link=https%3A//github.com/bswck/skeleton)](https://github.com/bswck/skeleton/tree/837babb)
 [![Package version](https://img.shields.io/pypi/v/autorefine?label=PyPI)](https://pypi.org/project/autorefine/)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/autorefine.svg?logo=python&label=Python)](https://pypi.org/project/autorefine/)
 
@@ -7,7 +7,6 @@
 [![Coverage](https://coverage-badge.samuelcolvin.workers.dev/bswck/autorefine.svg)](https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autorefine)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Code style](https://img.shields.io/badge/code%20style-black-000000.svg?label=Code%20style)](https://github.com/psf/black)
 [![License](https://img.shields.io/github/license/bswck/autorefine.svg?label=License)](https://github.com/bswck/autorefine/blob/HEAD/LICENSE)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
@@ -32,9 +31,9 @@ poetry add autorefine
 ## For contributors
 
 <!--
-This section was generated from bswck/skeleton@ecf53d2.
+This section was generated from bswck/skeleton@837babb.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/ecf53d2/fragments/readme.md
+https://github.com/bswck/skeleton/tree/837babb/fragments/readme.md
 -->
 
 !!! Note

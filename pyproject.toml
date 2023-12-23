@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@ecf53d2.
+# This file was generated from bswck/skeleton@837babb.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/ecf53d2/project/pyproject.toml.jinja
+# https://github.com/bswck/skeleton/tree/837babb/project/pyproject.toml.jinja
 
 [tool.poetry]
 name = "autorefine"
@@ -25,9 +25,9 @@ pydantic = "^2.5.2"
 [tool.poetry.group.dev.dependencies]
 
 [tool.poetry.group.dev-skeleton.dependencies]
-# This dependency group was generated from bswck/skeleton@ecf53d2.
+# This dependency group was generated from bswck/skeleton@837babb.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/ecf53d2/project/pyproject.toml.jinja
+# https://github.com/bswck/skeleton/tree/837babb/project/pyproject.toml.jinja
 mypy = "^1.7.0"
 ruff = "^0.1.2"
 towncrier = "^23.11.0"

@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@ecf53d2.
+# This file was generated from bswck/skeleton@837babb.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/ecf53d2/project/.github/workflows/mypy.yml.jinja
+# https://github.com/bswck/skeleton/tree/837babb/project/.github/workflows/mypy.yml.jinja
 
 name: "Mypy"
 
@@ -11,14 +11,14 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
     - uses: "actions/checkout@v4"
+    - name: "Install Poetry"
+      run: "pipx install poetry"
     - name: "Set up Python 3.8"
       uses: "actions/setup-python@v5"
       with:
-        python-version: "3.8"
+        cache: "poetry"
     - name: "Install the project"
-      run: |
-        pip install poetry
-        poetry install
+      run: "poetry install"
     - name: "Type-check with mypy"
       run: >
         poetry run mypy . --strict
