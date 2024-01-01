@@ -10,6 +10,11 @@
 [![License](https://img.shields.io/github/license/bswck/autorefine.svg?label=License)](https://github.com/bswck/autorefine/blob/HEAD/LICENSE)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
+> [!Warning]
+> 🚧 This project is currently in the **Work in Progress** state. 🚧
+>
+> Hit the `👁 Watch` button to know when it's ready to be tried out!
+
 Mechanize the refactoring process to operate on a large scale.
 
 The project is aimed to provide a framework for the process of refactoring Python projects
