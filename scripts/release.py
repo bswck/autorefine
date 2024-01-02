@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# This file was generated from bswck/skeleton@837babb.
+# This file was generated from bswck/skeleton@e4de851.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/837babb/project/scripts/release.py.jinja
+# https://github.com/bswck/skeleton/tree/e4de851/project/scripts/release.py.jinja
 #
 """
 Automate the release process by updating local files, creating and pushing a new tag.
@@ -172,13 +172,17 @@ def release(version: str, /) -> None:
         else:
             _run("gh", "release", "create", new_version, "--generate-notes")
 
+    _LOGGER.info("Done.")
+    _LOGGER.info("Bumping to the next patch version...")
+    _run("poetry", "version", "patch")
+
 
 def main(argv: list[str] | None = None) -> None:
     """Run the script."""
     _setup_logging()
 
     parser = argparse.ArgumentParser(description="Release a semver version.")
-    parser.add_argument("version", type=str)
+    parser.add_argument("version", type=str, default=_command("poetry version --short"))
     release(*vars(parser.parse_args(argv)).values())
 
 

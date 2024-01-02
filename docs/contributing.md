@@ -1,8 +1,8 @@
 
 <!--
-This file was generated from bswck/skeleton@837babb.
+This file was generated from bswck/skeleton@e4de851.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/837babb/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
+https://github.com/bswck/skeleton/tree/e4de851/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
 -->
 # Contributing to [autorefine](https://github.com/bswck/autorefine) 🎉
 Contributions are very welcome. 🚀
@@ -47,9 +47,9 @@ Ready to contribute? Here's a quick guide on how to set up autorefine and make a
 
 
 <!--
-This section was generated from bswck/skeleton@837babb.
+This section was generated from bswck/skeleton@e4de851.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/837babb/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
+https://github.com/bswck/skeleton/tree/e4de851/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
 -->
 
 !!! Note

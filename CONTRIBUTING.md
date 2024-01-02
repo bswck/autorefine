@@ -1,7 +1,7 @@
 <!--
-This file was generated from bswck/skeleton@837babb.
+This file was generated from bswck/skeleton@e4de851.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/837babb/fragments/contributing.md
+https://github.com/bswck/skeleton/tree/e4de851/fragments/contributing.md
 -->
 # Contributing to [autorefine](https://github.com/bswck/autorefine) 🎉
 Contributions are very welcome. 🚀
@@ -46,9 +46,9 @@ Ready to contribute? Here's a quick guide on how to set up autorefine and make a
 
 
 <!--
-This section was generated from bswck/skeleton@837babb.
+This section was generated from bswck/skeleton@e4de851.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/837babb/fragments/guide.md
+https://github.com/bswck/skeleton/tree/e4de851/fragments/guide.md
 -->
 
 > [!Note]

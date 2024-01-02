@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@837babb.
+# This file was generated from bswck/skeleton@e4de851.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/837babb/project/.github/workflows/%23%25%20if%20tests%20%25%23test.yml%23%25%20endif%20%25%23.jinja
+# https://github.com/bswck/skeleton/tree/e4de851/project/.github/workflows/%23%25%20if%20tests%20%25%23test.yml%23%25%20endif%20%25%23.jinja
 
 name: "Tests"
 
@@ -8,11 +8,12 @@ on: ["push"]
 
 jobs:
   test:
-    runs-on: "ubuntu-latest"
+    runs-on: "${{matrix.os}}-latest"
     environment: "Test"
     strategy:
       fail-fast: false
       matrix:
+        os: ["ubuntu", "macos", "windows"]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
     steps:
     - uses: "actions/checkout@v4"
