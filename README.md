@@ -1,4 +1,4 @@
-# autorefine [![skeleton](https://img.shields.io/badge/e4de851-skeleton?label=%F0%9F%92%80%20bswck/skeleton&labelColor=black&color=grey&link=https%3A//github.com/bswck/skeleton)](https://github.com/bswck/skeleton/tree/e4de851) [![Supported Python versions](https://img.shields.io/pypi/pyversions/autorefine.svg?logo=python&label=Python)](https://pypi.org/project/autorefine/) [![Package version](https://img.shields.io/pypi/v/autorefine?label=PyPI)](https://pypi.org/project/autorefine/)
+# autorefine [![skeleton](https://img.shields.io/badge/0bdf6a5-skeleton?label=%F0%9F%92%80%20bswck/skeleton&labelColor=black&color=grey&link=https%3A//github.com/bswck/skeleton)](https://github.com/bswck/skeleton/tree/0bdf6a5) [![Supported Python versions](https://img.shields.io/pypi/pyversions/autorefine.svg?logo=python&label=Python)](https://pypi.org/project/autorefine/) [![Package version](https://img.shields.io/pypi/v/autorefine?label=PyPI)](https://pypi.org/project/autorefine/)
 
 [![Tests](https://github.com/bswck/autorefine/actions/workflows/test.yml/badge.svg)](https://github.com/bswck/autorefine/actions/workflows/test.yml)
 [![Documentation Status](https://readthedocs.org/projects/autorefine/badge/?version=latest)](https://autorefine.readthedocs.io/en/latest/?badge=latest)
@@ -87,9 +87,9 @@ pipx install autorefine
 ## For contributors
 
 <!--
-This section was generated from bswck/skeleton@e4de851.
+This section was generated from bswck/skeleton@0bdf6a5.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/e4de851/project/README.md.jinja
+https://github.com/bswck/skeleton/tree/0bdf6a5/project/README.md.jinja
 -->
 
 > [!Note]

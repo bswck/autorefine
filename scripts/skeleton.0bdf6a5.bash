@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/e4de851).
+# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/0bdf6a5).
 #
-# This file was generated from bswck/skeleton@e4de851.
+# This file was generated from bswck/skeleton@0bdf6a5.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/e4de851/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
+# https://github.com/bswck/skeleton/tree/0bdf6a5/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
 #
 # Usage:
 #
@@ -22,7 +22,7 @@
 # at the same time.
 
 # shellcheck disable=SC2005
-# Automatically copied from https://github.com/bswck/skeleton/tree/e4de851/handle-task-event.sh
+# Automatically copied from https://github.com/bswck/skeleton/tree/0bdf6a5/handle-task-event.sh
 # Comms
 BOLD="\033[1m"
 RED="\033[0;31m"
@@ -49,8 +49,7 @@ success() {
 }
 
 silent() {
-    local CMD=$1
-    "$CMD" "${@:2}" > /dev/null 2>&1
+    "$1" "${@:2}" > /dev/null 2>&1
 }
 
 error() {
@@ -168,7 +167,7 @@ after_update_algorithm() {
 }
 
 main() {
-    export LAST_REF="e4de851"
+    export LAST_REF="0bdf6a5"
     export PROJECT_PATH_KEY="$$_skeleton_project_path"
     export NEW_REF_KEY="$$_skeleton_new_ref"
     export LAST_LICENSE_NAME="GPL-3.0"
