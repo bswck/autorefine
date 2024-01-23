@@ -13,7 +13,7 @@ packages = [{ include = "autorefine/" }]
 homepage = "https://github.com/bswck/autorefine"
 
 [tool.poetry.scripts]
-autorefine = "autorefine"
+autorefine = "autorefine.__main__:main"
 
 [tool.poetry.urls]
 Documentation = "https://autorefine.readthedocs.io/en/latest/"
