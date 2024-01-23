@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# This file was generated from bswck/skeleton@0.0.2rc-87-g35656e9.
+# This file was generated from bswck/skeleton@0.0.2rc-88-gf986f00.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-87-g35656e9/project/scripts/release.py.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-88-gf986f00/project/scripts/release.py.jinja
 #
 """
 Automate the release process by updating local files, creating and pushing a new tag.
