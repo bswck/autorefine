@@ -1,7 +1,7 @@
 """
-autorefine.
+`autorefine`.
 
-Mechanize the refactoring process to operate on a large scale.
+Scalable semi-automated code quality refining.
 
 (C) 2023-present Bartosz Sławecki (bswck)
 """

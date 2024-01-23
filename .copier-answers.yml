@@ -1,20 +1,22 @@
-_commit: 0bdf6a5
+_commit: 0.0.2rc-83-g3b14b33
 _src_path: gh:bswck/skeleton
-author_username: bswck
+author: bswck
+cli: true
+copyright: Bartosz Sławecki
+description: Scalable semi-automated code quality refining.
 docs: true
-docs_slug: autorefine
-email_address: bswck.dev@gmail.com
-github_username: bswck
-license_name: GPL-3.0
-org_full_name: Bartosz Sławecki
-package_name: autorefine
-project_description: Mechanize the refactoring process to operate on a large scale.
-publish_on_pypi: true
-pypi_project_description: Mechanize the refactoring process to operate on a large
-    scale.
+email: bswck.dev@gmail.com
+github: bswck
+license: GPL-3.0
+package: autorefine
+precommit: true
+pypi: true
+pypi_description: Scalable semi-automated code quality refining.
 pypi_project_name: autorefine
-python_version: '3.8'
-repo_name: autorefine
+pypy: true
+python: '3.8'
+repo: autorefine
+rtd: autorefine
 tests: true
-use_precommit: true
 visibility: public
+wip: true

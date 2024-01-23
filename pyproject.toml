@@ -1,16 +1,19 @@
-# This file was generated from bswck/skeleton@0bdf6a5.
+# This file was generated from bswck/skeleton@0.0.2rc-83-g3b14b33.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0bdf6a5/project/pyproject.toml.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-83-g3b14b33/project/pyproject.toml.jinja
 
 [tool.poetry]
 name = "autorefine"
-version = "0.0.1"
-description = "Mechanize the refactoring process to operate on a large scale."
+version = "0.0.0"
+description = "Scalable semi-automated code quality refining."
 authors = ["bswck <bswck.dev@gmail.com>"]
 license = "GPL-3.0"
 readme = "README.md"
 packages = [{ include = "autorefine/" }]
 homepage = "https://github.com/bswck/autorefine"
+
+[tool.poetry.scripts]
+autorefine = "autorefine"
 
 [tool.poetry.urls]
 Documentation = "https://autorefine.readthedocs.io/en/latest/"
@@ -25,19 +28,25 @@ pydantic = "^2.5.3"
 [tool.poetry.group.dev.dependencies]
 
 [tool.poetry.group.dev-skeleton.dependencies]
-# This dependency group was generated from bswck/skeleton@0bdf6a5.
+# This dependency group was generated from bswck/skeleton@0.0.2rc-83-g3b14b33.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0bdf6a5/pyproject.toml
+# https://github.com/bswck/skeleton/tree/0.0.2rc-83-g3b14b33/pyproject.toml
 mypy = "^1.7.0"
-ruff = "^0.1.11"
+ruff = "^0.1.12"
 towncrier = "^23.11.0"
+coverage = "^7.4.0"
 pytest = "^7.4.3"
-coverage = "^7.3.2"
+pytest-cov = "^4.1.0"
+pytest-doctestplus = "^1.1.0"
+covdefaults = "^2.3.0"
 poethepoet = "^0.24.3"
 pre-commit = "^3.5.0"
 smokeshow = "^0.4.0"
-
 keyring = "^24.3.0"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+
 [tool.poetry.group.docs]
 optional = true
 
@@ -49,7 +58,7 @@ mkdocstrings = { version = ">=0.19.0", extras = ["python"] }
 [tool.poe.tasks]
 test = "pytest -v"
 lint = "ruff check ."
-skeleton = "scripts/skeleton.0bdf6a5.bash"
+skeleton = "scripts/skeleton.0.0.2rc-83-g3b14b33.bash"
 check = [
     { ref="test" },
     { ref="lint" },
@@ -58,27 +67,27 @@ release.script = "scripts.release:main"
 
 [tool.poe.tasks.added]
 shell = "towncrier create $TICKET.added.md --edit"
-args = [{name = "TICKET", positional = true}]
+args = [{name = "TICKET", default = "+", positional = true}]
 
 [tool.poe.tasks.changed]
 shell = "towncrier create $TICKET.changed.md --edit"
-args = [{name = "TICKET", positional = true}]
+args = [{name = "TICKET", default = "+", positional = true}]
 
 [tool.poe.tasks.fixed]
 shell = "towncrier create $TICKET.fixed.md --edit"
-args = [{name = "TICKET", positional = true}]
+args = [{name = "TICKET", default = "+", positional = true}]
 
 [tool.poe.tasks.deprecated]
 shell = "towncrier create $TICKET.deprecated.md --edit"
-args = [{name = "TICKET", positional = true}]
+args = [{name = "TICKET", default = "+", positional = true}]
 
 [tool.poe.tasks.removed]
 shell = "towncrier create $TICKET.removed.md --edit"
-args = [{name = "TICKET", positional = true}]
+args = [{name = "TICKET", default = "+", positional = true}]
 
 [tool.poe.tasks.security]
 shell = "towncrier create $TICKET.security.md --edit"
-args = [{name = "TICKET", positional = true}]
+args = [{name = "TICKET", default = "+", positional = true}]
 
 [tool.ruff]
 exclude = ["tests/", "scripts/"]
@@ -125,7 +134,7 @@ strict = true
 profile = "black"
 
 [tool.towncrier]
-directory = "changes"
+directory = "news"
 package = "autorefine"
 filename = "CHANGELOG.md"
 start_string = "<!-- insertion marker -->\n"
@@ -163,9 +172,11 @@ directory = "fixed"
 name = "Fixed"
 showcontent = true
 
+[tool.coverage.run]
+plugins = ["covdefaults"]
+source = ["autorefine/"]
+
 [tool.coverage.report]
-omit = ["tests/*"]
-# fail_under = 96
 exclude_also = [
     # Be sure to include lines that are not meant to be covered
     # by tests or encountered by the users at runtime.

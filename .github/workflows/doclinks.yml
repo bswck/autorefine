@@ -1,26 +1,29 @@
 # This file was generated from bswck/skeleton@0.0.2rc-83-g3b14b33.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-83-g3b14b33/project/.github/workflows/lint.yml.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-83-g3b14b33/project/.github/workflows/%23%25%20if%20docs%20%25%23doclinks.yml%23%25%20endif%20%25%23.jinja
 
 # IMPORTANT!
 # Pinned versions of actions and Poetry are managed in a different repository.
 # Do not submit PRs to this file unless for this repo specifically.
 # To change this workflow globally, submit a PR to https://github.com/bswck/skeleton.
 
-name: "Lint"
+name: "ReadTheDocs Preview"
 
-on: ["push"]
+on:
+  pull_request_target:
+    types:
+    - "opened"
+    paths:
+    - "docs/**"
+    - "CHANGELOG.md"
+
+permissions:
+  pull-requests: "write"
 
 jobs:
-  lint:
+  documentation-links:
     runs-on: "ubuntu-latest"
     steps:
-    - uses: "actions/checkout@v4"
-    - name: "Set up Python 3.8"
-      uses: "actions/setup-python@v5"
+    - uses: "readthedocs/actions/preview@v1"
       with:
-        python-version: "3.8"
-    - name: "Install Ruff"
-      run: "pip install ruff"
-    - name: "Analyze the code with Ruff"
-      run: "ruff ."
+        project-slug: "autorefine"
