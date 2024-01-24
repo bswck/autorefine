@@ -1,7 +1,7 @@
 <!--
-This file was generated from bswck/skeleton@0.0.2rc-93-g2b0934b.
+This file was generated from bswck/skeleton@0.0.2rc-95-gc735522.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/0.0.2rc-93-g2b0934b/fragments/contributing.md
+https://github.com/bswck/skeleton/tree/0.0.2rc-95-gc735522/fragments/contributing.md
 -->
 # Contributing to [autorefine](https://github.com/bswck/autorefine) 🎉
 Contributions are very welcome. 🚀
@@ -46,9 +46,9 @@ Ready to contribute? Here's a quick guide on how to set up autorefine and make a
 
 
 <!--
-This section was generated from bswck/skeleton@0.0.2rc-93-g2b0934b.
+This section was generated from bswck/skeleton@0.0.2rc-95-gc735522.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/0.0.2rc-93-g2b0934b/fragments/guide.md
+https://github.com/bswck/skeleton/tree/0.0.2rc-95-gc735522/fragments/guide.md
 -->
 > [!Note]
 > If you use Windows, it is highly recommended to complete the installation in the way presented below through [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
