@@ -1,8 +1,8 @@
 
 <!--
-This file was generated from bswck/skeleton@0.0.2rc-104-g203a3fa.
+This file was generated from bswck/skeleton@0.0.2rc-105-g12b6954.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/0.0.2rc-104-g203a3fa/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
+https://github.com/bswck/skeleton/tree/0.0.2rc-105-g12b6954/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
 -->
 # Contributing to [autorefine](https://github.com/bswck/autorefine) 🎉
 Contributions are very welcome. 🚀
@@ -47,9 +47,9 @@ Ready to contribute? Here's a quick guide on how to set up autorefine and make a
 
 
 <!--
-This section was generated from bswck/skeleton@0.0.2rc-104-g203a3fa.
+This section was generated from bswck/skeleton@0.0.2rc-105-g12b6954.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/0.0.2rc-104-g203a3fa/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
+https://github.com/bswck/skeleton/tree/0.0.2rc-105-g12b6954/project/%23%25%20if%20docs%20%25%23docs%23%25%20endif%20%25%23/contributing.md.jinja
 -->
 !!! Note
     If you use Windows, it is highly recommended to complete the installation in the way presented below through [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
