@@ -1,5 +1,5 @@
 from autorefine.tools import Auditor
 
 
-class DocTest(Auditor):
+class DocTestAuditor(Auditor):
     pass
