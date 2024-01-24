@@ -1,3 +1,3 @@
-from ._diff_cover import DiffCoverReporter
+from ._diff_cover import DiffCoverFixViewer
 
-__all__ = ("DiffCoverReporter",)
+__all__ = ("DiffCoverFixViewer",)

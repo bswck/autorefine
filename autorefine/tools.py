@@ -19,7 +19,7 @@ class Check:
     fixer: Fixer
 
     def fix(self) -> None:
-        self.fixer.fix(self)
+        pass
 
     def dump(self) -> dict[str, str | int]:
         return {
@@ -34,17 +34,17 @@ class Check:
 class CommandLineTool(metaclass=ABCMeta):
     """Base class for all tools."""
 
-    def __init__(self, path: Path[str]) -> None:
+    def __init__(self, path: Path) -> None:
         self.path = path
 
-    @abstractmethod
     @property
+    @abstractmethod
     def version(self) -> str:
         raise NotImplementedError
 
 
 class Checker(CommandLineTool, metaclass=ABCMeta):
-    def get_checks(self, path: Path[str]) -> list[Check]:
+    def get_checks(self, path: Path) -> list[Check]:
         raise NotImplementedError
 
 
@@ -66,7 +66,7 @@ class VersionControlSystem(CommandLineTool, metaclass=ABCMeta):
 
 
 class FixViewer(CommandLineTool, metaclass=ABCMeta):
-    def view_diff(self, path: Path[str], fix: Check) -> None:
+    def view_diff(self, path: Path, fix: Check) -> None:
         raise NotImplementedError
 
 

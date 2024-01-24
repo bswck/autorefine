@@ -1,9 +1,9 @@
-from ._fixit import FixitFixer
+from ._fixit import FixItFixer
 from ._monkeytype import MonkeyTypeFixer
 from ._ruff import RuffFixer
 
 __all__ = (
-    "FixitFixer",
+    "FixItFixer",
     "MonkeyTypeFixer",
     "RuffFixer",
 )

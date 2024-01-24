@@ -1,3 +1,3 @@
-from ._git import GitVCS
+from ._smokeshow import SmokeshowDeployer
 
-__all__ = ("GitVCS",)
+__all__ = ("SmokeshowDeployer",)
