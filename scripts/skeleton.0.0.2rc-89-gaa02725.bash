@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/0.0.2rc-88-gf986f00).
+# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/0.0.2rc-89-gaa02725).
 #
-# This file was generated from bswck/skeleton@0.0.2rc-88-gf986f00.
+# This file was generated from bswck/skeleton@0.0.2rc-89-gaa02725.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-88-gf986f00/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-89-gaa02725/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
 #
 # Usage:
 #
@@ -126,32 +126,32 @@ make_context() {
 	)
 	export SKELETON_REF
 	SKELETON_REF=$(cat <<- 'EOF'
-		0.0.2rc-88-gf986f00
+		0.0.2rc-89-gaa02725
 	EOF
 	)
 	export SREF
 	SREF=$(cat <<- 'EOF'
-		0.0.2rc-88-gf986f00
+		0.0.2rc-89-gaa02725
 	EOF
 	)
 	export SKELETON_REV
 	SKELETON_REV=$(cat <<- 'EOF'
-		https://github.com/bswck/skeleton/tree/0.0.2rc-88-gf986f00
+		https://github.com/bswck/skeleton/tree/0.0.2rc-89-gaa02725
 	EOF
 	)
 	export SREV
 	SREV=$(cat <<- 'EOF'
-		https://github.com/bswck/skeleton/tree/0.0.2rc-88-gf986f00
+		https://github.com/bswck/skeleton/tree/0.0.2rc-89-gaa02725
 	EOF
 	)
 	export SKELETON_AND_REF
 	SKELETON_AND_REF=$(cat <<- 'EOF'
-		bswck/skeleton@0.0.2rc-88-gf986f00
+		bswck/skeleton@0.0.2rc-89-gaa02725
 	EOF
 	)
 	export SNREF
 	SNREF=$(cat <<- 'EOF'
-		bswck/skeleton@0.0.2rc-88-gf986f00
+		bswck/skeleton@0.0.2rc-89-gaa02725
 	EOF
 	)
 	export GH_REPO_ARGS
@@ -164,7 +164,7 @@ make_context() {
 		jq -n '{"deployment_branch_policy": {"protected_branches": false,"custom_branch_policies": true}}' | gh api -H "Accept: application/vnd.github+json" -X PUT "/repos/bswck/autorefine/environments/$1" --input -
 	EOF
 	)
-    export LAST_REF="0.0.2rc-88-gf986f00"
+    export LAST_REF="0.0.2rc-89-gaa02725"
     export PROJECT_PATH_KEY="$$_skeleton_project_path"
     export NEW_REF_KEY="$$_skeleton_new_ref"
     export LAST_LICENSE_NAME="GPL-3.0"
