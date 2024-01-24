@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@0.0.2rc-103-g3dc95a9.
+# This file was generated from bswck/skeleton@0.0.2rc-104-g203a3fa.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-103-g3dc95a9/project/.github/workflows/%23%25%20if%20tests%20%25%23test.yml%23%25%20endif%20%25%23.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-104-g203a3fa/project/.github/workflows/%23%25%20if%20tests%20%25%23test.yml%23%25%20endif%20%25%23.jinja
 
 # IMPORTANT!
 # Pinned versions of actions and Poetry are managed in a different repository.
@@ -43,10 +43,9 @@ jobs:
         -m pytest --doctest-only -v .
     - name: "Show coverage report"
       run: "poetry run coverage report --show-missing"
-    - run: "mv .coverage .coverage.${{env.context}}"
     - name: "Upload coverage data file artifact"
       uses: "actions/upload-artifact@v4"
       with:
         name: "coverage-${{env.context}}"
-        path: ".coverage.${{env.context}}"
+        path: ".coverage"
         overwrite: true
