@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@0.0.2rc-106-g72a244e.
+# This file was generated from bswck/skeleton@0.0.2rc-131-g4aee5bf.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-106-g72a244e/project/.github/dependabot.yml.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-131-g4aee5bf/project/.github/dependabot.yml.jinja
 
 version: 2
 updates:
@@ -16,6 +16,7 @@ updates:
   # Actions managed by https://github.com/bswck/skeleton
   - dependency-name: "actions/checkout"
   - dependency-name: "actions/setup-python"
+  - dependency-name: "codecov/codecov-action"
   - dependency-name: "pypa/gh-action-pypi-publish"
   - dependency-name: "pypa/gh-action-pip-audit"
   - dependency-name: "actions/download-artifact"
@@ -25,3 +26,16 @@ updates:
   directory: "/"
   schedule:
     interval: "daily"
+  ignore:
+  # Dependencies managed by https://github.com/bswck/skeleton
+  - dependency-name: "mypy"
+  - dependency-name: "ruff"
+  - dependency-name: "towncrier"
+  - dependency-name: "coverage"
+  - dependency-name: "pytest"
+  - dependency-name: "pytest-doctestplus"
+  - dependency-name: "covdefaults"
+  - dependency-name: "poethepoet"
+  - dependency-name: "pre-commit"
+  - dependency-name: "smokeshow"
+  - dependency-name: "keyring"
