@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@0.0.2rc-132-gf51a888.
+# This file was generated from bswck/skeleton@0.0.2rc-134-g0ac2307.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-132-gf51a888/project/%23%25%20if%20precommit%20%25%23.pre-commit-config.yaml%23%25%20endif%20%25%23.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-134-g0ac2307/project/%23%25%20if%20precommit%20%25%23.pre-commit-config.yaml%23%25%20endif%20%25%23.jinja
 
 default_install_hook_types:
 - "pre-commit"
@@ -8,7 +8,7 @@ default_install_hook_types:
 
 repos:
 - repo: "https://github.com/astral-sh/ruff-pre-commit"
-  rev: "v0.1.15"
+  rev: "v0.2.0"
   hooks:
   - id: "ruff"
     name: "Run the Ruff linter"
