@@ -29,6 +29,7 @@ Created to accomplish https://github.com/jaraco/skeleton/issues/98 and for perso
 
 # Planned tooling
 The project is planned to be a wrapper around the following well-tested & recognized tools:
+
 - [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
 - [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
 - [Ruff](https://github.com/astral-sh/ruff#readme) for automatic fixes and planning of manual refactoring steps,
