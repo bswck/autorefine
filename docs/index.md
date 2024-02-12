@@ -8,18 +8,19 @@
 
 !!! warning
     **Work in Progress**. 🚧
-
-    [Hit the `👁 Watch` button on GitHub](https://github.com/bswck/autorefine) to know when this project is ready to be tried out!
+    Hit the `👁 Watch` button to know when this project is ready to be tried out!
 
 Mechanize the code quality improvement process to operate on a large scale.
 
 The project is aimed to provide a framework for the process of refactoring Python projects
 from the very beginning to the very end:
+
 - `autorefine analyze` → **analyze the project** with linters and type checkers,
 - `autorefine roadmap` → **create a refactoring roadmap** (like https://github.com/CERT-Polska/malduck/issues/110, but with more details available as a specialized document),
 - `autorefine plan` → **create a delivery plan** (like in the issue above) to split the refactoring process into **a sequence of iterations**,
 - `autorefine autopilot` → **apply automatic fixes** and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
-- `autorefine audit` → typically **run tests** and other tools that determine whether the project runs safe,
+- `autorefine ci` → typically **run tests** and other tools that determine whether the project runs safe,
+- `autorefine audit` → **[run pip-audit](https://github.com/pypa/pip-audit)** and try to auto-fix in dependency specs,
 - `autorefine troubleshoot` → using the configured **auditing task** repeatedly when running `git bisect` to **find out what fix went wrong**, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize` → **create a PR** (like https://github.com/CERT-Polska/malduck/issues/111) to finalize the current iteration of refactoring with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
@@ -57,16 +58,18 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 7. Run `autorefine autopilot` to apply automatic fixes and commit them in reviewable and git-bisectable chunks with meaningful descriptions.
 
-8. Run `autorefine audit` to prevent future regressions.
+8. Run `autorefine ci` to prevent future regressions.
 
-9. Run `autorefine troubleshoot` to repeatedly call `autorefine audit` within `git bisect` to find out what fix went wrong, and get a detailed description of the problem and suggestions on how to fix it.
+9. Run `autorefine audit` to address supply chain security concerns.
 
-10. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
+10. Run `autorefine troubleshoot` to repeatedly call `autorefine audit` within `git bisect` to find out what fix went wrong, and get a detailed description of the problem and suggestions on how to fix it.
 
-11. Run `autorefine finalize` to finalize the current iteration and create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
+11. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
+
+12. Run `autorefine finalize` to finalize the current iteration and create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
 # Non-MVP ideas
-- `autorefine ci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
+- `autorefine makeci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
 - `autorefine template [TEMPLATE_NAME]` to configure Quality Assurance and CI/CD tooling (Ruff, tox, towncrier, Sphinx, etc.) by smart copying what is seen a specified repository (e.g. `autorefine template jaraco/skeleton`+[jaraco.develop](https://github.com/jaraco/jaraco.develop) could be used to copy tox.ini, GitHub Actions etc.)—feature for projects that don't intend to use a skeleton.
 - `autorefine breakdown` to create separate tickets for each fix in the roadmap in your workflow management tool (GitHub Projects, Jira, ClickUp, Asana, Trello, etc.).
 
@@ -87,7 +90,7 @@ pipx install autorefine
 <!--
 This section was generated from bswck/skeleton@0.0.2rc-134-g0ac2307.
 Instead of changing this particular file, you might want to alter the template:
-https://github.com/bswck/skeleton/tree/0.0.2rc-134-g0ac2307/fragments/readme.md
+https://github.com/bswck/skeleton/tree/0.0.2rc-134-g0ac2307/project/README.md.jinja
 -->
 !!! note
     If you use Windows, it is highly recommended to complete the installation in the way presented below through [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
