@@ -35,7 +35,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
   - [mypy](https://github.com/python/mypy#readme),
   - [pyre](https://github.com/facebook/pyre-check#readme),
   - [pytype](https://github.com/google/pytype#readme),
-- [diff-cover](https://github.com/Bachmann1234/diff_cover#readme) for [coverage](https://github.com/nedbat/coverage#readme) reports on fixes,
+- [diff-cover](https://github.com/Bachmann1234/diff_cover#readme) for [coverage](https://github.com/nedbat/coveragepy#readme) reports on fixes,
 - [smokeshow](https://github.com/samuelcolvin/smokeshow#readme) for hosting detailed refactoring roadmaps and delivery plans,
 - [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables,
 - [GitHub CLI](https://cli.github.com/) for creating tickets.
