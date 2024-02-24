@@ -1,9 +1,9 @@
+# SPDX-License-Identifier: GPL-3.0
+# (C) 2024-present Bartosz Sławecki (bswck)
 """
 `autorefine`.
 
 Entrypoint script.
-
-(C) 2024-present Bartosz Sławecki (bswck)
 """
 
 
