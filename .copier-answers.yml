@@ -15,10 +15,10 @@ pypi_description: Scalable semi-automated code quality refining.
 pypi_project: autorefine
 pypy: true
 python: '3.8'
-python_until: '3.13'
+python_until: '4.0'
 repo: autorefine
 rtd: autorefine
 tests: true
-tidelift: false
+tidelift: true
 visibility: public
 wip: true

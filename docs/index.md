@@ -4,6 +4,7 @@
 [![Tests](https://github.com/bswck/autorefine/actions/workflows/test.yml/badge.svg)](https://github.com/bswck/autorefine/actions/workflows/test.yml)
 [![Coverage](https://coverage-badge.samuelcolvin.workers.dev/bswck/autorefine.svg)](https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autorefine)
 [![Documentation Status](https://readthedocs.org/projects/autorefine/badge/?version=latest)](https://autorefine.readthedocs.io/en/latest/?badge=latest)
+[![Lifted?](https://tidelift.com/badges/package/pypi/autorefine)](https://tidelift.com/subscription/pkg/pypi-autorefine?utm_source=pypi-autorefine&utm_medium=readme)
 
 !!! warning
     **Work in Progress**. 🚧
@@ -75,6 +76,18 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 # Get inspired
 - https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c
+
+# For enterprise
+Available as part of the Tidelift Subscription.
+
+This project and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.
+
+[Learn more here](https://tidelift.com/subscription/pkg/pypi-autorefine?utm_source=pypi-autorefine&utm_medium=referral&utm_campaign=readthedocs).
+
+## Security contact information
+To report a security vulnerability, please use the
+[Tidelift security contact](https://tidelift.com/security).<br>
+Tidelift will coordinate the fix and disclosure.
 
 # Installation
 To use this globally as a CLI tool only, simply install it with [pipx](https://github.com/pypa/pipx):

@@ -22,7 +22,7 @@ Distribution = "https://pypi.org/project/autorefine/"
 Coverage = "https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autorefine"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.13"
+python = ">=3.8,<4.0"
 pydantic = "^2.5.3"
 
 [tool.poetry.group.dev.dependencies]
