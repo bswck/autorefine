@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from ._coverage import CoverageAuditor
 from ._doctest import DocTestAuditor
 from ._just import JustAuditor
