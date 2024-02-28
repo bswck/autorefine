@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from ._mypy import MypyTypeChecker
 from ._pyre import PyreTypeChecker
 from ._pytype import PytypeTypeChecker
