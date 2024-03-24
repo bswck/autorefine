@@ -1,6 +1,6 @@
-# This file was generated from bswck/skeleton@0.0.2rc-166-gf236e83.
+# This file was generated from bswck/skeleton@0.0.2rc-180-g2a2d737.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-166-gf236e83/project/pyproject.toml.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-180-g2a2d737/project/pyproject.toml.jinja
 
 [tool.poetry]
 name = "autorefine"
@@ -28,9 +28,9 @@ pydantic = "^2.6.3"
 [tool.poetry.group.dev.dependencies]
 
 [tool.poetry.group.dev-skeleton.dependencies]
-# This dependency group was generated from bswck/skeleton@0.0.2rc-166-gf236e83.
+# This dependency group was generated from bswck/skeleton@0.0.2rc-180-g2a2d737.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-166-gf236e83/project/pyproject.toml.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-180-g2a2d737/project/pyproject.toml.jinja
 mypy = "^1.7.0"
 ruff = "^0.2.2"
 towncrier = "^23.11.0"
@@ -57,7 +57,7 @@ mkdocstrings = { version = ">=0.19.0", extras = ["python"] }
 [tool.poe.tasks]
 test = "pytest -v"
 lint = "ruff check ."
-skeleton = "scripts/skeleton.0.0.2rc-166-gf236e83.bash"
+skeleton = "scripts/skeleton.0.0.2rc-180-g2a2d737.bash"
 check = [
     { ref="test" },
     { ref="lint" },

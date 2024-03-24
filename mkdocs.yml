@@ -1,12 +1,11 @@
-# This file was generated from bswck/skeleton@0.0.2rc-166-gf236e83.
+# This file was generated from bswck/skeleton@0.0.2rc-180-g2a2d737.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-166-gf236e83/project/%23%25%20if%20docs%20%25%23mkdocs.yml%23%25%20endif%20%25%23.jinja
+# https://github.com/bswck/skeleton/tree/0.0.2rc-180-g2a2d737/project/%23%25%20if%20docs%20%25%23mkdocs.yml%23%25%20endif%20%25%23.jinja
 
 site_name: "autorefine"
 site_description: "Scalable semi-automated code quality refining."
 site_url: "https://autorefine.readthedocs.io/en/latest/"
 repo_url: "https://github.com/bswck/autorefine"
-repo: "bswck/autorefine"
 watch:
 - "autorefine"
 
