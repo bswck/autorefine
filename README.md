@@ -26,20 +26,6 @@ from the very beginning to the very end:
 
 Created to accomplish https://github.com/jaraco/skeleton/issues/98 and for personal use to raise awareness of best practices across the Python community globally.
 
-# Planned Tooling
-The project is planned to be a wrapper around the following well-tested & recognized tools:
-- [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
-- [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
-- [Ruff](https://github.com/astral-sh/ruff#readme) for automatic fixes and planning of manual refactoring steps,
-- Static type checking:
-  - [mypy](https://github.com/python/mypy#readme),
-  - [pyre](https://github.com/facebook/pyre-check#readme),
-  - [pytype](https://github.com/google/pytype#readme),
-- [diff-cover](https://github.com/Bachmann1234/diff_cover#readme) for [coverage](https://github.com/nedbat/coveragepy#readme) reports on fixes,
-- [smokeshow](https://github.com/samuelcolvin/smokeshow#readme) for hosting detailed refactoring roadmaps and delivery plans,
-- [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables,
-- [GitHub CLI](https://cli.github.com/) for creating tickets.
-
 # Refactoring Workflow
 `autorefine` will be a CLI tool to help you refactor a project in a few simple steps:
 
@@ -66,6 +52,20 @@ The project is planned to be a wrapper around the following well-tested & recogn
 11. Manually fix the problems that cannot be fixed automatically. You will find them in the roadmap (`autorefine roadmap`).
 
 12. Run `autorefine finalize` to finalize the current iteration and create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
+
+# Planned Tooling
+The project is planned to be a wrapper around the following well-tested & recognized tools:
+- [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
+- [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
+- [Ruff](https://github.com/astral-sh/ruff#readme) for automatic fixes and planning of manual refactoring steps,
+- Static type checking:
+  - [mypy](https://github.com/python/mypy#readme),
+  - [pyre](https://github.com/facebook/pyre-check#readme),
+  - [pytype](https://github.com/google/pytype#readme),
+- [diff-cover](https://github.com/Bachmann1234/diff_cover#readme) for [coverage](https://github.com/nedbat/coveragepy#readme) reports on fixes,
+- [smokeshow](https://github.com/samuelcolvin/smokeshow#readme) for hosting detailed refactoring roadmaps and delivery plans,
+- [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables,
+- [GitHub CLI](https://cli.github.com/) for creating tickets.
 
 # Non-MVP Ideas
 - `autorefine makeci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
