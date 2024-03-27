@@ -20,13 +20,13 @@ from the very beginning to the very end:
 - `autorefine autopilot` → **apply automatic fixes** and commit them in reviewable and git-bisectable chunks with meaningful descriptions,
 - `autorefine ci` → typically **run tests** and other tools that determine whether the project runs safe,
 - `autorefine audit` → **[run pip-audit](https://github.com/pypa/pip-audit)** and try to auto-fix in dependency specs,
-- `autorefine troubleshoot` → using the configured **auditing task** repeatedly when running `git bisect` to **find out what fix went wrong**, describe the problem,
+- `autorefine troubleshoot` → using the configured **ci task** repeatedly when running `git bisect` to **find out what fix went wrong**, describe the problem,
 - leave the rest for manual work,
 - `autorefine finalize` → **create a PR** (like https://github.com/CERT-Polska/malduck/issues/111) to finalize the current iteration of refactoring with a detailed description of the changes and a link to the roadmap, delivery plan and all commits.
 
 Created to accomplish https://github.com/jaraco/skeleton/issues/98 and for personal use to raise awareness of best practices across the Python community globally.
 
-# Planned tooling
+# Planned Tooling
 The project is planned to be a wrapper around the following well-tested & recognized tools:
 - [MonkeyType](https://github.com/Instagram/MonkeyType#readme) for automatic type annotations generation,
 - [Fixit](https://github.com/Instagram/Fixit#readme) for automatic fixes that require static analysis and scope analysis and planning of manual refactoring steps,
@@ -40,7 +40,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 - [pandas](https://github.com/pandas-dev/pandas) for collecting tasks and creating markdown tables,
 - [GitHub CLI](https://cli.github.com/) for creating tickets.
 
-# Refactoring workflow
+# Refactoring Workflow
 `autorefine` will be a CLI tool that will help you refactor a project in a few simple steps:
 
 1. Fork a repository you want to refactor.
@@ -67,12 +67,12 @@ The project is planned to be a wrapper around the following well-tested & recogn
 
 12. Run `autorefine finalize` to finalize the current iteration and create a PR with a detailed description of the changes and a link to the roadmap, delivery plan and all commits of the current refactor iteration.
 
-# Non-MVP ideas
+# Non-MVP Ideas
 - `autorefine makeci` to create a dedicated CI pipeline (which will, by default, run `autorefine analyze` and `autorefine audit` on every PR) for your Git hosting provider (GitHub, GitLab, Bitbucket, etc.),
 - `autorefine template [TEMPLATE_NAME]` to configure Quality Assurance and CI/CD tooling (Ruff, tox, towncrier, Sphinx, etc.) by smart copying what is seen a specified repository (e.g. `autorefine template jaraco/skeleton`+[jaraco.develop](https://github.com/jaraco/jaraco.develop) could be used to copy tox.ini, GitHub Actions etc.)—feature for projects that don't intend to use a skeleton.
 - `autorefine breakdown` to create separate tickets for each fix in the roadmap in your workflow management tool (GitHub Projects, Jira, ClickUp, Asana, Trello, etc.).
 
-# Get inspired
+# Get Inspired
 - https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c
 
 
