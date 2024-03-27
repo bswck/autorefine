@@ -41,7 +41,7 @@ The project is planned to be a wrapper around the following well-tested & recogn
 - [GitHub CLI](https://cli.github.com/) for creating tickets.
 
 # Refactoring Workflow
-`autorefine` will be a CLI tool that will help you refactor a project in a few simple steps:
+`autorefine` will be a CLI tool to help you refactor a project in a few simple steps:
 
 1. Fork a repository you want to refactor.
 
