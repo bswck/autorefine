@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Interact with bswck/skeleton (current version: https://github.com/bswck/skeleton/tree/0.0.2rc-181-g825103e).
+# Interact with skeleton-ci/skeleton-python (current version: https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e).
 #
-# This file was generated from bswck/skeleton@0.0.2rc-181-g825103e.
+# This file was generated from skeleton-ci/skeleton-python@0.0.2rc-181-g825103e.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/bswck/skeleton/tree/0.0.2rc-181-g825103e/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
+# https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
 #
 # Usage:
 #
@@ -27,7 +27,7 @@ set -eEuo pipefail
 
 TEMPFILE=$(mktemp)
 
-curl "https://raw.githubusercontent.com/bswck/skeleton/HEAD/setup.bash" > "$TEMPFILE"
+curl "https://raw.githubusercontent.com/skeleton-ci/skeleton-python/HEAD/setup.bash" > "$TEMPFILE"
 trap 'builtin command rm -f "$TEMPFILE"' EXIT
 
 # shellcheck disable=SC1090
@@ -116,17 +116,17 @@ make_context() {
 	)
 	export SKELETON
 	SKELETON=$(cat <<- 'EOF'
-		bswck/skeleton
+		skeleton-ci/skeleton-python
 	EOF
 	)
 	export SKELETON_URL
 	SKELETON_URL=$(cat <<- 'EOF'
-		https://github.com/bswck/skeleton
+		https://github.com/skeleton-ci/skeleton-python
 	EOF
 	)
 	export RAW_SKELETON_URL
 	RAW_SKELETON_URL=$(cat <<- 'EOF'
-		https://raw.githubusercontent.com/bswck/skeleton
+		https://raw.githubusercontent.com/skeleton-ci/skeleton-python
 	EOF
 	)
 	export SKELETON_REF
@@ -141,22 +141,22 @@ make_context() {
 	)
 	export SKELETON_REV
 	SKELETON_REV=$(cat <<- 'EOF'
-		https://github.com/bswck/skeleton/tree/0.0.2rc-181-g825103e
+		https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e
 	EOF
 	)
 	export SREV
 	SREV=$(cat <<- 'EOF'
-		https://github.com/bswck/skeleton/tree/0.0.2rc-181-g825103e
+		https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e
 	EOF
 	)
 	export SKELETON_AND_REF
 	SKELETON_AND_REF=$(cat <<- 'EOF'
-		bswck/skeleton@0.0.2rc-181-g825103e
+		skeleton-ci/skeleton-python@0.0.2rc-181-g825103e
 	EOF
 	)
 	export SNREF
 	SNREF=$(cat <<- 'EOF'
-		bswck/skeleton@0.0.2rc-181-g825103e
+		skeleton-ci/skeleton-python@0.0.2rc-181-g825103e
 	EOF
 	)
 	export GH_REPO_ARGS
