@@ -5,7 +5,7 @@ cli: true
 copyright: Bartosz Sławecki
 description: Scalable semi-automated code quality refining.
 docs: true
-email: bswck.dev@gmail.com
+email: bartoszpiotrslawecki@gmail.com
 github: bswck
 license: GPL-3.0
 package: autorefine
@@ -15,7 +15,7 @@ pypi_description: Scalable semi-automated code quality refining.
 pypi_project: autorefine
 pypy: true
 python: '3.8'
-python_until: '4.0'
+python_until: ''
 repo: autorefine
 rtd: autorefine
 tests: true

@@ -6,7 +6,7 @@
 name = "autorefine"
 version = "0.0.0"
 description = "Scalable semi-automated code quality refining."
-authors = ["bswck <bswck.dev@gmail.com>"]
+authors = ["bswck <bartoszpiotrslawecki@gmail.com>"]
 license = "GPL-3.0"
 readme = "README.md"
 packages = [{ include = "autorefine/" }]
@@ -22,7 +22,7 @@ Distribution = "https://pypi.org/project/autorefine/"
 Coverage = "https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autorefine"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
+python = ">=3.8"
 pydantic = "^2.6.3"
 typer = "^0.10.0"
 
