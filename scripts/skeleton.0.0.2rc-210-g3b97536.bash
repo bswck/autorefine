@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # (C) 2023–present Bartosz Sławecki (bswck)
 #
-# Interact with skeleton-ci/skeleton-python (current version: https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e).
+# Interact with skeleton-ci/skeleton-python (current version: https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-210-g3b97536).
 #
-# This file was generated from skeleton-ci/skeleton-python@0.0.2rc-181-g825103e.
+# This file was generated from skeleton-ci/skeleton-python@0.0.2rc-210-g3b97536.
 # Instead of changing this particular file, you might want to alter the template:
-# https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
+# https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-210-g3b97536/project/scripts/skeleton.%7B%7Bsref%7D%7D.bash.jinja
 #
 # Usage:
 #
@@ -36,7 +36,7 @@ source "$TEMPFILE"
 make_context() {
 	export POETRY_VERSION
 	POETRY_VERSION=$(cat <<- 'EOF'
-		1.7.1
+		1.8.2
 	EOF
 	)
 	export GIT_USERNAME
@@ -86,7 +86,17 @@ make_context() {
 	)
 	export PYTHONS
 	PYTHONS=$(cat <<- 'EOF'
-		"3.8", "3.9", "3.10", "3.11", "3.12", "pypy3.8", "pypy3.9", "pypy3.10"
+		[('3', 8), ('3', 9), ('3', 10), ('3', 11), ('3', 12), ('pypy3', 10)]
+	EOF
+	)
+	export OUTERMOST_PYTHONS
+	OUTERMOST_PYTHONS=$(cat <<- 'EOF'
+		[('3', 8), ('3', 12)]
+	EOF
+	)
+	export INTERMEDIATE_PYTHONS
+	INTERMEDIATE_PYTHONS=$(cat <<- 'EOF'
+		[('3', 9), ('3', 10), ('3', 11), ('pypy3', 10)]
 	EOF
 	)
 	export REPO_URL
@@ -131,32 +141,32 @@ make_context() {
 	)
 	export SKELETON_REF
 	SKELETON_REF=$(cat <<- 'EOF'
-		0.0.2rc-181-g825103e
+		0.0.2rc-210-g3b97536
 	EOF
 	)
 	export SREF
 	SREF=$(cat <<- 'EOF'
-		0.0.2rc-181-g825103e
+		0.0.2rc-210-g3b97536
 	EOF
 	)
 	export SKELETON_REV
 	SKELETON_REV=$(cat <<- 'EOF'
-		https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e
+		https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-210-g3b97536
 	EOF
 	)
 	export SREV
 	SREV=$(cat <<- 'EOF'
-		https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-181-g825103e
+		https://github.com/skeleton-ci/skeleton-python/tree/0.0.2rc-210-g3b97536
 	EOF
 	)
 	export SKELETON_AND_REF
 	SKELETON_AND_REF=$(cat <<- 'EOF'
-		skeleton-ci/skeleton-python@0.0.2rc-181-g825103e
+		skeleton-ci/skeleton-python@0.0.2rc-210-g3b97536
 	EOF
 	)
 	export SNREF
 	SNREF=$(cat <<- 'EOF'
-		skeleton-ci/skeleton-python@0.0.2rc-181-g825103e
+		skeleton-ci/skeleton-python@0.0.2rc-210-g3b97536
 	EOF
 	)
 	export GH_REPO_ARGS
@@ -169,7 +179,7 @@ make_context() {
 		jq -n '{"deployment_branch_policy": {"protected_branches": false,"custom_branch_policies": true}}' | gh api -H "Accept: application/vnd.github+json" -X PUT "/repos/bswck/autorefine/environments/$1" --silent --input -
 	EOF
 	)
-    export LAST_REF="0.0.2rc-181-g825103e"
+    export LAST_REF="0.0.2rc-210-g3b97536"
     export PROJECT_PATH_KEY="$$_skeleton_project_path"
     export NEW_REF_KEY="$$_skeleton_new_ref"
     export LAST_LICENSE_NAME="GPL-3.0"
