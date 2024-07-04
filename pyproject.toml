@@ -23,7 +23,7 @@ Coverage = "https://coverage-badge.samuelcolvin.workers.dev/redirect/bswck/autor
 
 [tool.poetry.dependencies]
 python = ">=3.8"
-pydantic = "^2.6.3"
+pydantic = "^2.8.2"
 typer = "^0.12.1"
 
 [tool.poetry.group.dev.dependencies]
