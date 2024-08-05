@@ -8,7 +8,7 @@ default_install_hook_types:
 
 repos:
 - repo: "https://github.com/astral-sh/ruff-pre-commit"
-  rev: "v0.3.4"
+  rev: "v0.5.6"
   hooks:
   - id: "ruff"
     name: "Run the Ruff linter"
@@ -18,14 +18,14 @@ repos:
     name: "Run the Ruff formatter"
     types_or: ["python", "pyi"]
 - repo: "https://github.com/pre-commit/pre-commit-hooks"
-  rev: "v4.5.0"
+  rev: "v4.6.0"
   hooks:
   - id: "check-merge-conflict"
     args: ["--assume-in-merge"]
     name: "Check for merge conflicts"
     stages: ["push"]
 - repo: "https://github.com/python-poetry/poetry"
-  rev: "1.8.2"
+  rev: "1.8.0"
   hooks:
   - id: "poetry-lock"
     stages: ["push"]
