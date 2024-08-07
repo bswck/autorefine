@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "autorefine"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "bswck", email = "bartoszpiotrslawecki@gmail.com" }]
+dependencies = [
+    "typer>=0.12.3",
+    "pydantic>=2.8.2",
+    "ruff>=0.5.6",
+    "rich>=13.7.1",
+    "tomli>=2.0.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+autorefine = "autorefine.cli:app"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["mypy>=1.11.1", "ruff>=0.5.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["autorefine"]
+
+[tool.autorefine]
+tool_apis = ["autorefine.tools.mypy", "autorefine.tools.ruff"]
